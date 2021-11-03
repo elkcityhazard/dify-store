@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://elkcityhazard.github.io/dify-store/"
 languageCode = "en-us"
 title = "The DIFY"
 theme = "difyTheme"

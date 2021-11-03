@@ -1,4 +1,6 @@
 .featured-products {
+    text-align: center;
+    overflow-x: hidden;
     h3 {
         font-family: 'Dancing Script', cursive;
         font-size: 3.5rem;
@@ -9,5 +11,9 @@
         margin: auto;
         max-width: 100ch;
         text-align: left;
+    }
+
+    img {
+        max-width: 100%;
     }
 }

@@ -192,14 +192,14 @@
 
                             {{ end }}
                         {{ end }}
+    
                   </div>
-                                       <!-- If we need pagination -->
-  <!-- <div class="swiper-pagination-featured"></div> -->
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev-featured"></div>
-  <div class="swiper-button-next-featured"></div>
                 </div>
+                           <!-- If we need pagination -->
+  <div class="swiper-pagination-featured"></div>
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev featured btn-btn-secondary border-radius-circle absolute top-50"></div>
+  <div class="swiper-button-next featured"></div>
                   
             </div>
         </div>
@@ -264,7 +264,7 @@
               },
               640: {
                 slidesPerView: 2,
-          spaceBetween: 5,
+          spaceBetween: 0,
               },
               980: {
                 slidesPerView: 3,
@@ -280,7 +280,11 @@
           navigation: {
             nextEl: ".swiper-button-next-featured",
             prevEl: ".swiper-button-prev-featured",
-          },       
+          },     
+          // And if we need scrollbar
+          scrollbar: {
+            el: ".swiper-scrollbar-featured",
+          },  
       })
 
 
