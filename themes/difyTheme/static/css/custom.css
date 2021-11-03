@@ -1,0 +1,58 @@
+.logo-bar {
+  position: relative;
+}
+.logo-bar::after {
+  background: linear-gradient(0.25turn, #046582, #6e7582, #bb8082, #f39189, #fff);
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 5px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
+
+/************************
+**Custom Swiper Styles*** 
+*************************/
+.hero-slide {
+  background: none;
+  background-position-x: 100%;
+  background-position-y: 50%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-container {
+  background: white;
+  background: linear-gradient(90deg, white 60%, rgba(255, 130, 130, 0.497619116) 100%, red 100%);
+}
+.hero-container h1 {
+  font-size: 4.75rem;
+  font-weight: 700;
+}
+.hero-container h2 {
+  font-size: 4.25rem;
+  font-weight: 600;
+}
+
+.swiper-slider {
+  margin: 0 auto;
+  width: 100% !important;
+}
+
+.featured-products h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.featured-products p {
+  margin: auto;
+  max-width: 100ch;
+  text-align: left;
+}
+
+/*# sourceMappingURL=custom.css.map */

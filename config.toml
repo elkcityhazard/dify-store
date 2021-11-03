@@ -1,0 +1,86 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "The DIFY"
+theme = "difyTheme"
+
+
+[params]
+    author = "Andrew M McCall"
+    description = "Dify Store is an arts and crafts blog and e-commerce store front."
+    opengraphdefault = "{{ .Site.BaseURL}}/images/logo.jpg"
+    imgAltDefault = "Dify Store is an arts and crafts blog and e-commerce store front.."
+
+
+[[params.social]]
+name = "facebook"
+url = "https://www.facebook.com/mary.fortuna"
+icon = "fa fa-facebook fa-2x"
+
+
+
+
+[menu]
+[[menu.main]]
+identifier = '/'
+name = 'Home'
+url = '/'
+weight = -210
+
+
+[[menu.main]]
+identifier = 'about'
+name = "About Us"
+url = '/about/'
+weight = -180
+
+
+[[menu.main]]
+identifier = 'contact'
+name = 'Contact Us'
+url = '/contact/'
+weight = -190
+
+
+# ## Gallery Children
+
+# [[menu.main]]
+# identifier = 'animals-and-insects'
+# name = 'Animals & Insects'
+# url = '/gallery/animals-and-insects'
+# parent = 'gallery'
+# weight = -210
+
+# [[menu.main]]
+# identifier = 'collages'
+# name = 'Collages'
+# url = '/gallery/collages'
+# parent = 'gallery'
+# weight = -210
+
+# [[menu.main]]
+# identifier = 'commissions-and-kids-drawings'
+# name = "Commissions & Kid's Drawings"
+# url = '/gallery/commissions-and-kids-drawings'
+# parent = 'gallery'
+# weight = -210
+
+# [[menu.main]]
+# identifier = 'dolls'
+# name = 'Dolls'
+# url = '/gallery/dolls'
+# parent = 'gallery'
+# weight = -210
+
+# [[menu.main]]
+# identifier = 'felt-and-fabric-dolls'
+# name = 'Felt & Fabric'
+# url = '/gallery/dolls/felt-and-fabric-dolls'
+# parent = 'dolls'
+# weight = -210
+
+# [[menu.main]]
+# identifier = 'leather-dolls'
+# name = 'Leather Dolls'
+# url = '/gallery/dolls/leather-dolls'
+# parent = 'dolls'
+# weight = -210
