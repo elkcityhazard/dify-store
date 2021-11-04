@@ -1,4 +1,4 @@
-baseURL = "https://thedify.com/demo/"
+baseURL = "/"
 languageCode = "en-us"
 title = "The DIFY"
 theme = "difyTheme"
