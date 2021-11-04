@@ -1,3 +1,10 @@
 @import './_components/logoBar';
 @import './_components/swiper.scss';
 @import './_components/featuredProducts.scss';
+@import './_components/testimonials';
+@import './_components/cta';
+
+html,
+body {
+    height: 100% !important;
+}

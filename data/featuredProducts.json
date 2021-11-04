@@ -1,0 +1,32 @@
+[
+    {
+        "id" : 0,
+        "src" : "images/products/crocin-300x300.webp",
+        "title" : "Custom Drinkware",
+        "blob" : "images/blobs/blob-1.svg"
+    },
+    {
+        "id" : 1,
+        "src" : "images/products/long-day-cup-300x300.webp",
+        "title" : "Custom Drinkware",
+        "blob" : "images/blobs/blob-2.svg"
+    },
+    {
+        "id" : 2,
+        "src" : "images/products/coozies-300x300.webp",
+        "title" : "Koozies and Swag",
+        "blob" : "images/blobs/blob-3.svg"
+    },
+    {
+        "id" : 3,
+        "src" : "images/products/grab-the-vodka-300x300.webp",
+        "title" : "Tumblers and Tees",
+        "blob" : "images/blobs/blob-4.svg"
+    },
+    {
+        "id" : 4,
+        "src" : "images/products/jewelry-300x300.webp",
+        "title" : "Jewelry",
+        "blob" : "images/blobs/blob-5.svg"
+    }
+]

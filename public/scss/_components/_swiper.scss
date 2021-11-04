@@ -9,6 +9,7 @@
     background-position-y: 50%;
     background-size: auto 100%;
     background-repeat: no-repeat;
+    background-attachment: fixed !important;
     margin: 0 auto;
     width: 100%;
 }
@@ -17,12 +18,12 @@
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 60%, rgba(255,130,130,0.49761911600577735) 100%, rgba(255,0,0,1) 100%);
     h1 {
-        font-size: 4.75rem;
+        font-size: 5.0rem;
         font-weight: 700;
     }
 
     h2 {
-        font-size: 4.25rem;
+        font-size: 4.5rem;
         font-weight: 600;
     }
 }

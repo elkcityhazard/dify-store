@@ -1,19 +1,122 @@
 .featured-products {
-    text-align: center;
-    overflow-x: hidden;
-    h3 {
-        font-family: 'Dancing Script', cursive;
-        font-size: 3.5rem;
-        font-weight: 700;
+  background: rgba(234, 154, 178, 0.5);
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+  overflow-x: hidden;
+  h3 {
+    font-family: "Dancing Script", cursive;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-decoration: wavy;
+    a {
+      color: #fff !important;
+      transition: all 250ms ease;
+      -webkit-transition: all 250ms ease;
+      &:hover {
+        text-shadow: 2px 2px 5px rgba(234, 242, 215, 1);
+      }
     }
+  }
 
-    p {
-        margin: auto;
-        max-width: 100ch;
-        text-align: left;
+  p {
+    margin: auto;
+    max-width: 100ch;
+    text-align: left;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  img.featured-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -3;
+  }
+}
+
+.featured-products__featured-product {
+  position: relative;
+
+  .blob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 250ms linear;
+    transform: translate3D(-50%, -50%, 0) scale(1.5);
+    z-index: -1;
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0.66;
+    z-index: 1;
+  }
+
+  h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    position: relative;
+    z-index: 3;
+  }
+  a.perspective {
+    transition: all 250ms ease;
+    transform-style: preserve-3d;
+    perspective: 750px;
+  }
+  .featured-products__featured-product__thumbnail {
+    position: relative;
+    transform: rotateZ(15deg);
+    transition: all 300ms ease;
+    z-index: 2;
+    &:hover {
+      transform: scale(1.05);
     }
+  }
+}
 
-    img {
-        max-width: 100%;
+.rotate:hover + .blob {
+        transform: translate3D(-50%, -50%, 0) rotateZ(20deg) scale(1.5);
+        opacity: 1;
+      
+}
+
+a.cta-btn {
+	box-sizing: border-box;
+	border: 0px;
+	font-size: 18px;
+	font-style: inherit;
+	font-weight: 500;
+	margin: 0px;
+	outline: 0px;
+	padding: 20px 40px;
+    position: relative;
+	vertical-align: baseline;
+	background-color: rgb(7, 67, 107);
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	transition: all 0.3s ease 0s;
+	box-shadow: rgba(0, 0, 0, 0.5) 4px 6px 12px 0px;
+	width: auto;
+	display: inline-block;
+	line-height: 1;
+	border-radius: 30px;
+	fill: rgb(255, 255, 255);
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+    z-index: 10;
+    &:hover {
+        outline: 0px;
+        background-color: rgb(7, 67, 75);
+        color: rgb(255, 255, 255);
+    }
+    &:focus {
+        outline: 1px;
     }
 }
+  

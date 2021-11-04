@@ -1,0 +1,26 @@
+[
+        {
+            "id" : 0,
+            "src" : "images/testimonials/young-woman-400x400.png",
+            "name" : "Abril Hernandez",
+            "stars" : 5,
+            "location" : "Baltimore, MD",
+            "review" : "Heather was one super nice and professional! I loved every second of my experience shopping with her small business. Great communication skills, amazing products and great quality! I ordered a tumbler for my business and let me tell you I am EXTREMELY satisfied and pleased with my purchase. I especially like supporting her business because it is FEMALE OWNED AND OPERATED 💪🏽🙌🏽⚡️🍾 Thank you so much Heather. I will be taking this cup everywhere to show it off 😎 If you want to support a small business I definitely recommend this one!!! She also does right about everything possible ✨"
+        },
+        {
+            "id" : 0,
+            "src" : "images/testimonials/father-daughter-400x400.png",
+            "name" : "Gabe & Joyce",
+            "stars" : 5,
+            "location" : "Dallas, TX",
+            "review" : "These ladies are the best! They created a decal for my little business for my car so I could spread the word! Great work, so many awesome products at awesome prices! I highly recommend them for anything personalized, business or not. 💚"
+        },
+        {
+            "id" : 0,
+            "src" : "images/testimonials/smiling-man-400x400.png",
+            "name" : "Jess",
+            "stars" : 5,
+            "location" : "Austin, TX",
+            "review" : "Heather was fantastic to work with! She was able to make a custom t-shirt for me almost instantaneously. She was kind enough to go in to her shop after business hours for a rush order. My husband and I are very grateful she was willing to help and the shirt looks wonderful! We will definitely be using her again. Heather, thank you so much for all your help!"
+        }
+]
