@@ -1,5 +1,8 @@
 section.cta {
-    background: rgba(255,255,255, 0.75);
+    background: rgba(255,255,255, 0.9);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: grid;
     place-items: center;
     
@@ -9,7 +12,6 @@ section.cta {
         min-height: 100%;
         position: relative;
         img.cta {
-            display: block;
             left: 50%;
             max-width: 100%;
             height: 100% !important;

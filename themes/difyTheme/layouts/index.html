@@ -171,7 +171,7 @@
 
     <!-- Featured Products Section-->
 
-    <section class="container-fluid featured-products d-block ">
+    <section class="container-fluid featured-products d-block">
       <img src="{{.Site.BaseURL}}images/backgrounds/scissor-background-1920x1080.jpg" class="featured-img responsive-img" alt="easel" loading="lazy" decoding="async" height="1080" width="1920"> 
         <div class="row">
             <div class="col-12 py-5 text-center" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="250">
@@ -183,7 +183,7 @@
         </div>
         <div class="row">
           {{- range .Site.Data.featuredProducts -}}
-          <div class="col-12 col-md-6 col-lg-2 mx-auto featured-products__featured-product" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="250">
+          <div class="col-12 col-md-6 col-lg-2 mx-auto my-4 featured-products__featured-product" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="250">
             <figure class="d-block align-items-center justify-content-center">
               <a href="#" class="perspective rotate">
                 <img src="{{- .src -}}" class="rounded-circle shadow featured-products__featured-product__thumbnail" alt="{{- .title -}}" loading="lazy" decoding="async">
@@ -207,58 +207,49 @@
 
       <!-- Testimonials -->
 
-      <section class="testimonials container-fluid d-block h-100">
-        <div class="wrapper container-fluid">
-          <img src="{{- .Site.BaseURL -}}images/testimonials/testimonial-1920x1080.jpeg" alt=" background image" class="splatter" loading="lazy" decoding="async">
+      <section class="testimonials container-fluid lazyBG">
         <div class="container-fluid">
           <div class="row">
             <div class="col text-center">
               <h3>Testimonials</h3>
             </div>
           </div>
-          <div class="row d-flex h-100 clearfix">
+          <div class="row">
             {{ range .Site.Data.testimonials }}
-            <div class="col col-md-3 mx-auto">
-              <div class="row">
-                <div class="col text-center">
-                  <img src="{{ .src | absURL }}" class="rounded-circle responsive-img" loading="lazy" decoding="async" alt="{{ .name }}" height="300" width="300">
+            <div class="col col-md-3 mx-auto text-center">
+                
+                  <img src="{{ .src | absURL }}" class="rounded-circle responsive-img mx-auto" loading="lazy" decoding="async" alt="{{ .name }}" height="300" width="300">
 
+                <div class="row">
+                  <div class="col d-flex align-items-center justify-content-evenly fs-2 p-3 stars">
+                    {{ with .stars}}
+                    {{ $stars := . }}
+                    {{ range $i, $seq := (seq $stars)}}
+                    <i class="fa fa-star"></i>
+                    {{ end }}
+                    {{ end }}
+                    
+                  </div>
                 </div>
-                <div class="col-12 d-flex align-items-center justify-content-evenly fs-2 p-3 stars">
-                  {{ with .stars}}
-                  {{ $stars := . }}
-                  {{ range $i, $seq := (seq $stars)}}
-                  <i class="fa fa-star"></i>
-                  {{ end }}
-                  {{ else }}
-                  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                  {{ end }}
-                  
-                </div>
-                <div class="col-12 text-center">
-                  <p class="testimonials__name">{{- .name -}}</p>
-                </div>
-                <div class="col-12 text-center">
-                  <p>{{ .location }}</p>
-                </div>
-                <div class="col-12 text-center">
-                  <p class="text-start testimonials__content">{{ .review }}</p>
-                </div>
-
-              </div>                
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <p class="testimonials__name">{{- .name -}}</p>
+                    <p>{{ .location }}</p>
+                    <p class="text-start testimonials__content">{{ .review }}</p>
+                    </div>  
+                </div>    
             </div>
             {{ end }}            
           </div>
         </div>
-        </div>
 
       </section>
 
-      <section class="cta d-block container-fluid h-75">
-        <div class="wrapper">
-          <img src="{{ .Site.BaseURL}}images/cta/paint-bg-1920x1080.png" class="cta responsive-img" alt="background" loading="lazy" decoding="async" height="1080" width="1920">
+      <!-- CTA -->
+
+      <section data-background="{{- .Site.BaseURL -}}images/testimonials/testimonial-1920x1080.jpeg"  class="cta container-fluid lazyBG">
         <div class="container-fluid text-center">
-          <div class="row my-3  w-100 py-5">
+          <div class="row my-3 w-100 py-5">
             <div class="col-12 col-md-9 text-center mx-auto">
                 <h4 class="display-4 fw-1">Do you want to make your own gifts?</h4>
                   <p>Dify is an online service that makes custom gifts for you so that you don't have to. It's easy, fun and totally customizable. You can upload pictures of yourself or your loved ones and we will create a portrait using fun, colorful designs. If you're not quite ready for something this personal, our pre-made designs are the perfect way to get started! We also offer DIY holiday cards and invitations as well as DIY party supplies like cupcake wrappers, table runners and more!</p>
@@ -267,10 +258,11 @@
                 </div>
           </div>
         </div>
-        </div>
+        
       </section>
+      
 
-      <footer class="container-fluid h-100">
+      <footer class="container-fluid">
         <div class="row">
           <div class="col mx-auto text-center">
             <h4>Footer Title</h4>
@@ -362,6 +354,23 @@
 
 
       });
+
+      const images = document.querySelectorAll('.lazyBG');
+
+observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      entry.target.style.backgroundImage = `url('${entry.target.getAttribute('data-background')}')`;
+      observer.unobserve(entry.target)
+    } else {
+      entry.target.classList.remove('fancy');
+    }
+  });
+});
+
+images.forEach(image => {
+  observer.observe(image);
+});
 
     </script>
   </body>

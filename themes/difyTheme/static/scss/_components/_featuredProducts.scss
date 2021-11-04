@@ -14,6 +14,8 @@
       color: #fff !important;
       transition: all 250ms ease;
       -webkit-transition: all 250ms ease;
+      position: relative;
+      z-index: 4;
       &:hover {
         text-shadow: 2px 2px 5px rgba(234, 242, 215, 1);
       }

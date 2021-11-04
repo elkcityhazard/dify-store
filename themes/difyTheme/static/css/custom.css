@@ -63,6 +63,8 @@
   color: #fff !important;
   transition: all 250ms ease;
   -webkit-transition: all 250ms ease;
+  position: relative;
+  z-index: 4;
 }
 .featured-products h3 a:hover {
   text-shadow: 2px 2px 5px #eaf2d7;
@@ -166,9 +168,10 @@ a.cta-btn:focus {
 }
 
 section.testimonials {
-  display: block;
-  min-height: 100%;
-  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh !important;
   padding: 0 !important;
   padding-top: 1rem;
 }
@@ -190,14 +193,15 @@ section.testimonials .testimonials__name {
   margin-bottom: 0.8em;
 }
 section.testimonials .wrapper {
+  height: 100% !important;
   margin: 0;
   padding: 0;
-  position: relative;
 }
 section.testimonials .wrapper .splatter {
+  display: none;
   left: 50%;
   max-width: 100%;
-  height: 100%;
+  height: auto;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -206,7 +210,10 @@ section.testimonials .wrapper .splatter {
 }
 
 section.cta {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.9);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: grid;
   place-items: center;
 }
@@ -217,7 +224,6 @@ section.cta .wrapper {
   position: relative;
 }
 section.cta .wrapper img.cta {
-  display: block;
   left: 50%;
   max-width: 100%;
   height: 100% !important;
