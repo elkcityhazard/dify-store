@@ -5,85 +5,40 @@
 
     {{ partial "navigation.html" .}}
 
-    <header class="swiper container-fluid h-100">
+    <header class="container-fluid swiper h-75">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div data-background="{{- .Site.BaseURL -}}images/slider/hero-slider-1-1920x1080.jpeg" class="swiper-lazy w-100 h-100 hero-slide w-100" style="background-size: cover; background-repeat: no-repeat;">
-                    <div class="container-fluid h-100 hero-container">
-                        <div class="row h-100">
-                            <div class="h-100 d-flex align-items-center justify-content-center col-12 col-md-9 col-lg-6 mx-auto p-5">
-                                <div class="swiper-lazy-preloader"></div>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <h1 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">WE CRAFT</h1>
-                                    <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">EXPERIENCES</h2>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col text-center py-5">
-                                            <a href="#" class="btn btn-primary py-3 px-5 text-uppercase cta-btn" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="250">Contact Us</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            {{ range .Site.Data.slides }}
+            <!-- Slides -->
+            <div class="swiper-slide h-100">
+                <div data-background="{{ .src | absURL}}" class="swiper-lazy h-100">
+                  <div class="swiper-lazy-preloader"></div>
+                <div class="container-fluid h-100">
+                    <div class="row h-100 grid justify-content-center align-items-center">
+                      <div class="col-12 col-md-6 h-100 d-flex align-items-center justify-content-center flex-column hero-container">
+                        <h1 data-aos="fade-up" data-aos-duration="1250" data-aos-delay="100">{{.h1}}</h1>
+                        <h2 data-aos="fade-up" data-aos-duration="1250" data-aos-delay="250">{{.h2}}</h2>
+                        <a href="{{ .Site.BaseURL}}contact-us" class="cta-btn btn">Contact Us</a>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <figure>
+                          <img src="{{.img | absURL}}" class="fluid-img rounded-circle" data-aos="fade-in" data-aos-duration="1250" data-aos-delay="100" loading="lazy" alt="">
+                        </figure>
+                      </div>
                     </div>
-                  </div>
-            </div>
-            <div class="swiper-slide">
-                <div data-background="{{- .Site.BaseURL -}}images/slider/hero-slider-2-1920x1080.jpeg" class="swiper-lazy w-100 h-100 hero-slide w-100" style="background-size: cover; background-repeat: no-repeat;">
-                    <div class="container-fluid h-100 hero-container">
-                        <div class="row h-100">
-                            <div class="h-100 d-flex align-items-center justify-content-center col-12 col-md-9 col-lg-6 mx-auto p-5">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <h1 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">WE MAKE</h1>
-                                    <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">MEMORIES</h2>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col text-center py-5">
-                                            <a href="#" class="btn btn-primary py-3 px-5 text-uppercase cta-btn" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="250">Contact Us</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-            </div>
-            <div class="swiper-slide">
-                <div data-background="{{- .Site.BaseURL -}}images/slider/hero-slider-3-1920x1080.jpeg" class="swiper-lazy w-100 h-100 hero-slide w-100" style="background-size: cover; background-repeat: no-repeat;">
-                    <div class="container-fluid h-100 hero-container">
-                        <div class="row h-100">
-                            <div class="h-100 d-flex align-items-center justify-content-center col-12 col-md-9 col-lg-6 mx-auto p-5">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <h1 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">WE CREATE</h1>
-                                    <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">TOGETHER</h2>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col text-center py-5">
-                                            <a href="#" class="btn btn-primary py-3 px-5 text-uppercase cta-btn" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="250">Contact Us</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-            </div>  
-        </div>
-        <!-- Swiper Pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- Swiper Navigation Buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+                </div>
+                </div>
+              </div>
+            {{ end }}
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
     </header>
 
 

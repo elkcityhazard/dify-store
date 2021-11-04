@@ -47,7 +47,9 @@
         loop: true,
         preloadImages: false,
         lazy: true,
-        centeredSlides: false,   
+        centeredSlides: false,  
+        observer: true, 
+        observeParents: true, 
         pagination: {
           el: ".swiper-pagination-featured",
         },
@@ -103,5 +105,10 @@ images.forEach(image => {
 observer.observe(image);
 });
 
+window.addEventListener('load', () => {
+  document.querySelectorAll('lazyBG').forEach((slide) => {
+    slide.style.backgroundImage = `url('${slide.getAttribute('data-background')}')`
+  })
+})
 
   </script>
