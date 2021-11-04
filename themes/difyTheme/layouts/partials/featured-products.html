@@ -1,0 +1,34 @@
+<!-- Featured Products Section-->
+
+<section class="container-fluid featured-products d-block">
+    <img src="{{.Site.BaseURL}}images/backgrounds/scissor-background-1920x1080.jpg" class="featured-img responsive-img" alt="easel" loading="lazy" decoding="async" height="1080" width="1920"> 
+      <div class="row">
+          <div class="col-12 py-5 text-center" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="250">
+              <h3>Featured Products</h3>
+              <p class="py-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, soluta eaque. Quam quaerat nulla maiores ad consequatur autem repellat illo voluptatem sint ab tempore error perferendis at sit incidunt tempora nemo blanditiis iure, est impedit magnam ea velit asperiores explicabo?
+              </p>
+          </div>
+      </div>
+      <div class="row">
+        {{- range .Site.Data.featuredProducts -}}
+        <div class="col-12 col-md-6 col-lg-2 mx-auto my-4 featured-products__featured-product" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="250">
+          <figure class="d-block align-items-center justify-content-center">
+            <a href="#" class="perspective rotate">
+              <img src="{{- .src | absURL -}}" class="rounded-circle shadow featured-products__featured-product__thumbnail" alt="{{- .title -}}" loading="lazy" decoding="async">
+            </a>
+            <img src="{{- .blob | absURL -}}" class="blob" alt="blob" loading="lazy" decoding="async" height="400" width="400">            
+          </figure>
+          <h3 class=" my-2 p-2"><a href="#" class="thumb-title text-decoration-none text-white" title="{{- .title -}}">{{- .title -}}</a></h3>
+        </div>
+
+        {{- end -}}
+      </div>
+      <div class="row mt-5">
+        <div class="col p-3 mx-auto" data-aos="fade-in" data-aos-duration="1250" data-aos-delay="350">
+          <a href="#" class="cta-btn">CONTACT US</a>
+        </div>
+      </div>
+    </section>
+
+  <!-- End Featured Products -->

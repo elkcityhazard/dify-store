@@ -1,0 +1,27 @@
+<!-- Logo Bar -->
+<div class="container-fluid py-3 logo-bar">
+    <div class="row d-flex justify-content-center align-items-center mb-3">
+      <div class="col-12 text-center">
+        <a href="{{ .Site.BaseURL | absURL}}" title="{{ .Site.Title}}">
+          <img
+            src="{{- .Site.BaseURL -}}images/logo.png"
+            alt="{{.Site.Title}}"
+            height="100"
+            width="100"
+            loading="lazy" decoding="async"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="row d-flex-justify-content-center align-items-center mb-3">
+        <div class="container">
+            <nav class="text-center d-flex align-items-center justify-content-center">
+              {{range .Site.Menus.main}}
+              <a href="{{.URL | absURL}}" class="py-1 px-2 mx-3 text-decoration-none btn nav-link">{{- .Name -}}</a>
+            {{ end }}
+            </nav>
+        </div>
+    </div>
+  </div>
+
+  <!-- End Logo Bar-->

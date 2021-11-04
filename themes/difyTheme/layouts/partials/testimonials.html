@@ -1,0 +1,37 @@
+<section class="testimonials container-fluid lazyBG mt-5" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="150">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col text-center">
+          <h3>Testimonials</h3>
+        </div>
+      </div>
+      <div class="row">
+        {{ range .Site.Data.testimonials }}
+        <div class="col-12 col-md-4 mx-auto text-center">
+            
+              <img src="{{ .src | absURL }}" class="rounded-circle img-fluid mx-auto" loading="lazy" decoding="async" alt="{{ .name }}" height="300" width="300">
+
+            <div class="row">
+              <div class="col d-flex align-items-center justify-content-evenly fs-2 p-3 stars">
+                {{ with .stars}}
+                {{ $stars := . }}
+                {{ range $i, $seq := (seq $stars)}}
+                <i class="fa fa-star"></i>
+                {{ end }}
+                {{ end }}
+                
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 text-center">
+                <p class="testimonials__name">{{- .name -}}</p>
+                <p>{{ .location }}</p>
+                <p class="text-start testimonials__content">{{ .review }}</p>
+                </div>  
+            </div>    
+        </div>
+        {{ end }}            
+      </div>
+    </div>
+
+  </section>

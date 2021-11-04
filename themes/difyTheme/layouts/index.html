@@ -1,72 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ .Description }}" />
-    <title>{{ .Site.Title}}</title>
-
-    <!--preload, preconnect, prefetch-->
-    <link rel="preconnect" href="https://unpkg.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <!-- Stylesheets -->
-    <link
-      href="https://unpkg.com/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{.Site.BaseURL}}css/custom.css">
-
-    <!-- Deferred Scripts -->
-    <script
-      id="bootstrapScript"
-      src="https://unpkg.com/bootstrap@5.1.0/dist/js/bootstrap.bundle.js"
-      defer
-    ></script>
-    <script
-      id="aosScript"
-      src="https://unpkg.com/aos@2.3.1/dist/aos.js"
-      defer
-    ></script>
-    <script
-      id="swiperScript"
-      src="https://unpkg.com/swiper@7/swiper-bundle.min.js"
-      defer
-    ></script>
-  </head>
+  {{ partial "head.html" .}}
   <body class="h-100">
-    <div class="container-fluid py-3 logo-bar">
-      <div class="row d-flex justify-content-center align-items-center mb-3">
-        <div class="col-12 text-center">
-          <a href="{{ .Site.BaseURL | absURL}}" title="{{ .Site.Title}}">
-            <img
-              src="{{- .Site.BaseURL -}}images/logo.png"
-              alt="{{.Site.Title}}"
-              height="100"
-              width="100"
-              loading="lazy" decoding="async"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="row d-flex-justify-content-center align-items-center mb-3">
-          <div class="container">
-              <nav class="text-center d-flex align-items-center justify-content-center">
-                {{range .Site.Menus.main}}
-                <a href="{{.URL | absURL}}" class="py-1 px-2 mx-3 text-decoration-none btn btn-warning">{{- .Name -}}</a>
-              {{ end }}
-              </nav>
-          </div>
-      </div>
-    </div>
+
+    {{ partial "navigation.html" .}}
 
     <!-- Header Carousel-->
     <header class="swiper h-75 main-header">
@@ -74,8 +11,8 @@
 
         <!-- Slide 1-->
         <div
-        data-background="{{- .Site.BaseURL -}}images/slider/koozies-and-swag.jpg"
-        class="swiper-slide swiper-lazy hero-slide w-100"
+        data-background="{{- .Site.BaseURL -}}images/slider/hero-slider-1-1920x1080.jpeg"
+        class="swiper-slide swiper-lazy hero-slide w-100 lazyBG"
       >
         <div class="swiper-lazy-preloader">
         </div>
@@ -103,8 +40,8 @@
       <!-- Slide 2-->
 
       <div
-        data-background="{{- .Site.BaseURL -}}images/slider/tumblers_tees.jpg"
-        class="swiper-slide swiper-lazy hero-slide w-100"
+        data-background="{{- .Site.BaseURL -}}images/slider/hero-slider-2-1920x1080.jpeg"
+        class="swiper-slide swiper-lazy hero-slide w-100 lazyBG"
       >
         <div class="swiper-lazy-preloader">
         </div>
@@ -131,9 +68,8 @@
 
       <!-- Slide 3-->
       <div
-        data-background="{{- .Site.BaseURL -}}images/slider/custom-drinkware.jpg"
-        class="swiper-slide swiper-lazy hero-slide w-100"
-      >
+        data-background="{{- .Site.BaseURL -}}images/slider/hero-slider-3-1920x1080.jpeg"
+        class="swiper-slide swiper-lazy hero-slide w-100 lazyBG">
         <div class="swiper-lazy-preloader">
         </div>
         <div class="container-fluid h-100 hero-container">
@@ -169,242 +105,18 @@
       <div class="swiper-button-next"></div>
     </header>
 
-    <!-- Featured Products Section-->
-
-    <section class="container-fluid featured-products d-block">
-      <img src="{{.Site.BaseURL}}images/backgrounds/scissor-background-1920x1080.jpg" class="featured-img responsive-img" alt="easel" loading="lazy" decoding="async" height="1080" width="1920"> 
-        <div class="row">
-            <div class="col-12 py-5 text-center" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="250">
-                <h3>Featured Products</h3>
-                <p class="py-5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, soluta eaque. Quam quaerat nulla maiores ad consequatur autem repellat illo voluptatem sint ab tempore error perferendis at sit incidunt tempora nemo blanditiis iure, est impedit magnam ea velit asperiores explicabo?
-                </p>
-            </div>
-        </div>
-        <div class="row">
-          {{- range .Site.Data.featuredProducts -}}
-          <div class="col-12 col-md-6 col-lg-2 mx-auto my-4 featured-products__featured-product" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="250">
-            <figure class="d-block align-items-center justify-content-center">
-              <a href="#" class="perspective rotate">
-                <img src="{{- .src -}}" class="rounded-circle shadow featured-products__featured-product__thumbnail" alt="{{- .title -}}" loading="lazy" decoding="async">
-              </a>
-              <img src="{{- .blob | absURL -}}" class="blob" alt="blob" loading="lazy" decoding="async" height="400" width="400">
-              <figcaption class="text-center">
-                <h3 class=" my-2 p-2"><a href="#" class="thumb-title text-decoration-none text-white" title="{{- .title -}}">{{- .title -}}</a></h3>
-              </figcaption>
-            </figure>
-          </div>
-
-          {{- end -}}
-        </div>
-        <div class="row mt-5">
-          <div class="col p-3 mx-auto" data-aos="fade-in" data-aos-duration="1250" data-aos-delay="350">
-            <a href="#" class="cta-btn">CONTACT US</a>
-          </div>
-        </div>
-      </section>
+    {{ partial "featured-products.html" .}}
 
 
       <!-- Testimonials -->
 
-      <section class="testimonials container-fluid lazyBG">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col text-center">
-              <h3>Testimonials</h3>
-            </div>
-          </div>
-          <div class="row">
-            {{ range .Site.Data.testimonials }}
-            <div class="col col-md-3 mx-auto text-center">
-                
-                  <img src="{{ .src | absURL }}" class="rounded-circle responsive-img mx-auto" loading="lazy" decoding="async" alt="{{ .name }}" height="300" width="300">
+      {{ partial "testimonials.html" .}}
 
-                <div class="row">
-                  <div class="col d-flex align-items-center justify-content-evenly fs-2 p-3 stars">
-                    {{ with .stars}}
-                    {{ $stars := . }}
-                    {{ range $i, $seq := (seq $stars)}}
-                    <i class="fa fa-star"></i>
-                    {{ end }}
-                    {{ end }}
-                    
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 text-center">
-                    <p class="testimonials__name">{{- .name -}}</p>
-                    <p>{{ .location }}</p>
-                    <p class="text-start testimonials__content">{{ .review }}</p>
-                    </div>  
-                </div>    
-            </div>
-            {{ end }}            
-          </div>
-        </div>
-
-      </section>
-
-      <!-- CTA -->
-
-      <section data-background="{{- .Site.BaseURL -}}images/testimonials/testimonial-1920x1080.jpeg"  class="cta container-fluid lazyBG">
-        <div class="container-fluid text-center">
-          <div class="row my-3 w-100 py-5">
-            <div class="col-12 col-md-9 text-center mx-auto">
-                <h4 class="display-4 fw-1">Do you want to make your own gifts?</h4>
-                  <p>Dify is an online service that makes custom gifts for you so that you don't have to. It's easy, fun and totally customizable. You can upload pictures of yourself or your loved ones and we will create a portrait using fun, colorful designs. If you're not quite ready for something this personal, our pre-made designs are the perfect way to get started! We also offer DIY holiday cards and invitations as well as DIY party supplies like cupcake wrappers, table runners and more!</p>
-                <p>With Dify, creating custom gifts has never been easier. Browse through our wide selection of unique gift ideas or upload your own photos to create</p>
-                <a class="btn cta-btn" href="#" role="button">Start Your First Project</a>
-                </div>
-          </div>
-        </div>
-        
-      </section>
+      {{ partial "cta.html" .}}
       
 
-      <footer class="container-fluid">
-        <div class="row w-75 mx-auto">
-          <div class="col-12 col-md-9 mx-auto text-center p-3">
-            <h4 class="fs-1">The Dify Store</h4>
-            <p class="fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aperiam eveniet voluptates reprehenderit nesciunt inventore eius molestiae recusandae, facilis suscipit.</p>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col mx-auto">
-            <h4>Our Promise</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni at repudiandae iusto rerum consequatur quia recusandae voluptatem numquam tempore sequi!</p>
-          </div>
-          <div class="col">
-            <h4>Contact Us</h4>
-            <address>
-              <ul>
-                <li>lorem3</li>
-                <li>lorem3</li>
-                <li>lorem3</li>
-                <li>lorem3</li>
-              </ul>
-            </address>
-          </div>
-          <div class="col mx-auto">
-            <h4>Links</h4>
-            <ul>
-              {{ range .Site.Menus.main}}
-                <li><a href="{{  .URL | absURL}}">{{ .Name}}</a></li>
-              {{ end }}
-            </ul>
-          </div>
-          <div class="col mx-auto">
-            <h4>Additional Links</h4>
-            {{ range .Site.Menus.main}}
-                <li><a href="{{  .URL | absURL}}">{{ .Name}}</a></li>
-              {{ end }}
-          </div>
-        </div>
-      </footer>
+      {{ partial "footer.html" .}}
 
-    <!-- init scripts-->
-    <script>
-      // Init Animate On Scroll
-      document.getElementById("aosScript").addEventListener("load", () => {
-        AOS.init();
-      });
-
-      // Init Swiper
-
-      document.getElementById("swiperScript").addEventListener("load", () => {
-        const swiper = new Swiper(".swiper", {
-          // Optional parameters
-          direction: "horizontal",
-          autostart: true,
-          loop: true,
-          preloadImages: false,
-          lazy: true,
-          centeredSlides: false,
-          effect: "fade",
-          fadeEffect: {
-              crossFade: true,
-          },
-          slidesPerView: 'auto',
-          watchSlidesProgress: true,
-
-          // If we need pagination
-          pagination: {
-            el: ".swiper-pagination",
-          },
-
-          // Navigation arrows
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-
-          // And if we need scrollbar
-          scrollbar: {
-            el: ".swiper-scrollbar",
-          },
-        });
-
-        // Featured Swiper
-
-        const featuredSwiper = new Swiper(".featured-swiper", {
-        direction: "horizontal",
-          loop: true,
-          preloadImages: false,
-          lazy: true,
-          centeredSlides: false,   
-          pagination: {
-            el: ".swiper-pagination-featured",
-          },
-          breakpoints: {
-              320: {
-                slidesPerView: 1,
-          spaceBetween: 0,
-              },
-              640: {
-                slidesPerView: 2,
-          spaceBetween: 0,
-              },
-              980: {
-                slidesPerView: 3,
-          spaceBetween: 10,
-              },
-              1200: {
-                slidesPerView: 5,
-                spaceBetween: 20,
-              }
-          },
-          
-          // Navigation arrows
-          navigation: {
-            nextEl: ".swiper-button-next-featured",
-            prevEl: ".swiper-button-prev-featured",
-          },     
-          // And if we need scrollbar
-          scrollbar: {
-            el: ".swiper-scrollbar-featured",
-          },  
-      })
-
-
-      });
-
-      const images = document.querySelectorAll('.lazyBG');
-
-observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio > 0) {
-      entry.target.style.backgroundImage = `url('${entry.target.getAttribute('data-background')}')`;
-      observer.unobserve(entry.target)
-    } else {
-      entry.target.classList.remove('fancy');
-    }
-  });
-});
-
-images.forEach(image => {
-  observer.observe(image);
-});
-
-    </script>
+      {{ partial "scripts.html" .}}
   </body>
 </html>

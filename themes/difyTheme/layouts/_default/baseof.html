@@ -2,10 +2,12 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
+        {{- partial "navigation.html" . -}}
         {{- partial "header.html" . -}}
-        <div id="content">
+        <main id="content d-flex container mx-auto">
         {{- block "main" . }}{{- end }}
-        </div>
+        </main>
         {{- partial "footer.html" . -}}
+        {{- partial "scripts.html" . -}}
     </body>
 </html>

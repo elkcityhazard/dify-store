@@ -16,6 +16,10 @@ name = "facebook"
 url = "https://www.facebook.com/mary.fortuna"
 icon = "fa fa-facebook fa-2x"
 
+[markup.goldmark.renderer]
+    unsafe = true
+    
+
 
 
 
@@ -28,17 +32,41 @@ weight = -210
 
 
 [[menu.main]]
-identifier = 'about'
+identifier = 'about-us'
 name = "About Us"
-url = '/about/'
+url = '/about-us/'
 weight = -180
 
 
 [[menu.main]]
-identifier = 'contact'
+identifier = 'contact-us'
 name = 'Contact Us'
-url = '/contact/'
+url = '/contact-us/'
 weight = -190
+
+[[menu.privacy]]
+identifier = 'privacy-policy'
+name = 'Privacy Policy'
+url = '/privacy-policy/'
+weight = 0
+
+[[menu.privacy]]
+identifier = 'cookie-policy'
+name = 'Cookie Policy'
+url = '/cookie-policy/'
+weight = 0
+
+[[menu.privacy]]
+identifier = 'terms-and-conditions'
+name = 'Terms and Conditions'
+url = '/terms-and-conditions/'
+weight = 20
+
+[[menu.privacy]]
+identifier = 'dmca'
+name = 'DMCA Copyright'
+url = '/dmca/'
+weight = 20
 
 
 # ## Gallery Children

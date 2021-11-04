@@ -15,19 +15,31 @@
 }
 
 .hero-container {
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 60%, rgba(255,130,130,0.49761911600577735) 100%, rgba(255,0,0,1) 100%);
+    background: rgb(255,255,255, 0.25);
+    background-size: cover;
+    background-repeat: no-repeat;
     h1 {
-        font-size: 5.0rem;
+        font-size: 4.0rem;
         font-weight: 700;
     }
 
     h2 {
-        font-size: 4.5rem;
+        font-size: 3rem;
         font-weight: 600;
     }
 }
 .swiper-slider {
     margin: 0 auto;
     width: 100% !important;
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-container {
+        h1 {
+            font-size: 6rem;
+        }
+        h2 {
+            font-size: 5rem;
+        }
+    }
 }

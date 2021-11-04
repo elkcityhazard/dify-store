@@ -1,0 +1,106 @@
+<!-- init scripts-->
+<script>
+    // Init Animate On Scroll
+    document.getElementById("aosScript").addEventListener("load", () => {
+      AOS.init();
+    });
+
+    // Init Swiper
+
+    document.getElementById("swiperScript").addEventListener("load", () => {
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        autostart: true,
+        loop: true,
+        preloadImages: false,
+        lazy: true,
+        centeredSlides: false,
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true,
+        },
+        slidesPerView: 'auto',
+        watchSlidesProgress: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+
+      // Featured Swiper
+
+      const featuredSwiper = new Swiper(".featured-swiper", {
+      direction: "horizontal",
+        loop: true,
+        preloadImages: false,
+        lazy: true,
+        centeredSlides: false,   
+        pagination: {
+          el: ".swiper-pagination-featured",
+        },
+        breakpoints: {
+            320: {
+              slidesPerView: 1,
+        spaceBetween: 0,
+            },
+            640: {
+              slidesPerView: 2,
+        spaceBetween: 0,
+            },
+            980: {
+              slidesPerView: 3,
+        spaceBetween: 10,
+            },
+            1200: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            }
+        },
+        
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next-featured",
+          prevEl: ".swiper-button-prev-featured",
+        },     
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar-featured",
+        },  
+    })
+
+
+    });
+
+    const images = document.querySelectorAll('.lazyBG');
+
+observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+  if (entry.intersectionRatio > 0) {
+    entry.target.style.backgroundImage = `url('${entry.target.getAttribute('data-background')}')`;
+    entry.target.style.backgroundSize = "cover";
+    entry.target.style.backgroundPosition = "center center"
+    observer.unobserve(entry.target)
+  } else {
+    entry.target.classList.remove('fancy');
+  }
+});
+});
+
+images.forEach(image => {
+observer.observe(image);
+});
+
+  </script>
