@@ -38,7 +38,6 @@
 }
 
 .hero-container {
-  background: rgba(255, 255, 255, 0.25);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -196,7 +195,6 @@ section.testimonials {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh !important;
   padding: 0 !important;
   padding-top: 1rem;
 }
