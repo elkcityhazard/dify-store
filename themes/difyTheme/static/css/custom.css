@@ -301,9 +301,16 @@ section.contact-us .nav-link:hover {
   color: #ea9ab2;
 }
 
+.tag {
+  background: black;
+  color: #fff;
+  font-size: 0.66rem;
+  padding: 0.25rem 0.5rem;
+}
+
 html,
 body {
-  oveflow-x: hidden;
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=custom.css.map */

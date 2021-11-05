@@ -1,3 +1,64 @@
 {{ define "main" }}
+
+<main class="main-content container-fluid">
+    <div class="row p-3">
+        <div class="col text-center mx-auto">
+            <h1>{{ .Title }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-8 offset-md-1">
+            <section class="list">
+                {{ range .Pages}}
+                <div class="row m-3">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="col-12">
+                                    <h2>{{.Title}}</h2>
+                                </div>
+                                <div class="col-12">
+                                    <strong><i class="fa fa-address-card-o" aria-label="Author"></i></strong> <span>{{ .Params.author }}</span> 
+                                    <strong><i class="fa fa-calendar" aria-label="Date Published"></i></strong> <span>{{ time.Format "Monday, Jan 2, 2006" .Date }}</span>
+                                        {{ range (.GetTerms "tags") }}
+                                            <a href="{{ .Permalink }}" class="btn btn-secondary rounded-pill tag">{{ .LinkTitle }}</a>
+                                        {{ end }}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-12 col-md-3">
+                                            {{ if .Params.img}}
+                                            <img src="{{ .Params.img}}" class="fluid-img" loading="lazy" decoding="async" alt="Post Thumbnail" height="150" width="150">
+                                            {{ else }}
+                                            <img src="{{- .Site.BaseURL -}}images/logo.png" alt="logo thumbnail" class="fluid-img" loading="lazy" decoding="async" height="150" width="150">
+                                            {{- end -}}
+                                        </div>
+                                        <div class="col-12 col-md-9 p-2">
+                                            <p>{{.Content | truncate 140}}</p>
+                                            <a href="{{- .RelPermalink | absURL -}}" title="{{.Title}}" class="btn btn-success">{{- .Title -}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </section>
+        </div>
+        <aside class="col-12 col-md-3 ">
+            <section class="breadcrumbs m-3">
+                <h3>Breadcrumbs</h3>
+                {{- partial "breadcrumbs.html" . -}}
+            </section>
+            {{- partial "related.html" . -}}
+            
+        </aside>
+    </div>
+</main>
+
     {{ .Content }}
 {{ end }}

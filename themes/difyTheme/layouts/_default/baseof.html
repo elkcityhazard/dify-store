@@ -5,7 +5,9 @@
         {{- partial "navigation.html" . -}}
         {{- partial "header.html" . -}}
         <main id="content d-flex container mx-auto">
-        {{- block "main" . }}{{- end }}
+        {{- block "main" . }}
+        {{ .Content }}
+        {{- end }}
         </main>
         {{- partial "footer.html" . -}}
         {{- partial "scripts.html" . -}}

@@ -1,0 +1,14 @@
+<section class="related-pages">
+
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<h3>See Also</h3>
+<ul class="list-group-flush">
+	{{ range . }}
+	<li class="list-group-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+	{{ end }}
+</ul>
+{{ end }}
+
+
+</section>

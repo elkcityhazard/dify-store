@@ -6,9 +6,23 @@
         </div>
     </div>
 </header>
-<section class="col-12 col-sm-12 col-md-6 p-3 mx-auto" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="100">
-    {{ .Content }}
-</section>
+<main class="main-content container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-7 ms-auto">
+            <article>
+                {{ .Content }}
+            </article>
+        </div>
+        <aside class="col-12 col-md-3 me-auto">
+            <section class="breadcrumbs">
+                <h3>Breadcrumbs</h3>
+                {{- partial "breadcrumbs.html" . -}}
+            </section>
+            {{- partial "related.html" . -}}
+            
+        </aside>
+    </div>
+</main>
   
 {{ partial "featured-products.html" .}}
 {{ partial "testimonials.html" .}}

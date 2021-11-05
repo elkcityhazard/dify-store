@@ -15,7 +15,7 @@
     </div>
     <div class="row d-flex-justify-content-center align-items-center mb-3">
         <div class="container">
-            <nav class="text-center d-flex align-items-center justify-content-center">
+            <nav class="text-center d-flex flex-wrap align-items-center justify-content-center">
               {{range .Site.Menus.main}}
               <a href="{{.URL | absURL}}" class="py-1 px-2 mx-3 text-decoration-none btn nav-link">{{- .Name -}}</a>
             {{ end }}
