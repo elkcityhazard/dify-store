@@ -6,9 +6,11 @@
         {{- partial "header.html" . -}}
         <main id="content d-flex container mx-auto">
         {{- block "main" . }}
-        {{ .Content }}
         {{- end }}
         </main>
+        {{- partial "featured-products.html" . -}}
+        {{- partial "testimonials.html" . -}}
+        {{- partial "cta.html" . -}}
         {{- partial "footer.html" . -}}
         {{- partial "scripts.html" . -}}
     </body>
