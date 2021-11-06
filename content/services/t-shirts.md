@@ -5,6 +5,7 @@ layout: single-service
 image : "images/products/coozies-300x300.webp"
 author: Andrew
 date: 2021-11-04
+ctaAlt: true
 category:
     - Services
 tags:

@@ -1,5 +1,7 @@
 ---
 title: About Us
+description: "learn all about us!"
+ctaAlt: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eu ultrices vitae auctor eu augue ut lectus. Nam aliquam sem et tortor consequat id porta nibh. Ac turpis egestas maecenas pharetra convallis posuere morbi leo urna. Lacinia quis vel eros donec ac. Maecenas volutpat blandit aliquam etiam erat velit scelerisque. Id leo in vitae turpis massa sed elementum. Faucibus nisl tincidunt eget nullam non nisi est sit amet. Facilisis sed odio morbi quis. Nisl pretium fusce id velit ut.

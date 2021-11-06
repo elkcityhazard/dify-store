@@ -4,6 +4,7 @@ description: hello world
 image : "images/slider/corporate-branding-and-decor.jpg"
 author: Andrew
 date: 2021-11-01
+ctaAlt: true
 category:
     - Services
 tags:

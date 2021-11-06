@@ -1,5 +1,30 @@
 <!-- CTA -->
 
+{{ if .Params.ctaAlt}}
+
+<!-- Alternative CTA -->
+
+<section data-background="{{- .Site.BaseURL -}}images/cta/wood-grain-1920x200.png" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="100" class="cta cta-alt container-fluid lazyBG">
+  <div class="row py-3">
+    <div class="col-9 mx-auto position-relative text-center">
+      <h4 class="fs-1">Limited Time Offer: Buy One Get One Free</h4>
+      <p class="fs-3">Available for a limited time, grab one while you can!</p>
+      <a href="/contact-us" class="cta-btn">Contact Us</a>
+      <figure class="cta-cup">
+        <img src="{{- .Site.BaseURL -}}images/backgrounds/cup-1-400.png" alt="cup" class="img-fluid" loading="lazy" decoding="async" height="350" width="350">
+
+      </figure>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- End Alternative CTA-->
+
+{{ else }}
+
 <section data-background="{{- .Site.BaseURL -}}images/testimonials/testimonial-1920x1080.jpeg" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="150"  class="cta container-fluid lazyBG">
     <div class="container-fluid text-center">
       <div class="row  my-3 py-5">
@@ -16,24 +41,4 @@
 
   <!-- End CTA -->
 
-
-  <!-- Alternative CTA -->
-
-  <section data-background="{{- .Site.BaseURL -}}images/cta/wood-grain-1920x200.png" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="100" class="cta cta-alt container-fluid lazyBG">
-    <div class="row py-3">
-      <div class="col-9 mx-auto position-relative text-center">
-        <h4 class="fs-1">Limited Time Offer: Buy One Get One Free</h4>
-        <p class="fs-3">Available for a limited time, grab one while you can!</p>
-        <a href="/contact-us" class="cta-btn">Contact Us</a>
-        <figure class="cta-cup">
-          <img src="{{- .Site.BaseURL -}}images/backgrounds/cup-1-400.png" alt="cup" class="img-fluid" loading="lazy" decoding="async" height="350" width="350">
-
-        </figure>
-      </div>
-
-    </div>
-  </section>
-
-
-
-  <!-- End Alternative CTA-->
+  {{ end }}
