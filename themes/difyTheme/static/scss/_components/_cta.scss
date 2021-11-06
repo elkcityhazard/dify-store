@@ -33,7 +33,6 @@ section.cta {
 section.cta-alt {
     background: rgba(226, 115, 150, 0.5);
     color: #fff;
-    display: none;
     padding: 0;
     .row {
         height: 100%;
@@ -62,6 +61,7 @@ section.cta-alt {
             z-index: 99999;
             img {
                 cursor: pointer;
+                display: none;
                 transform: rotateX(7deg) rotateY(10deg) rotateZ(5deg) scale(0.97);
                 transition: all 250ms linear;
             -webkit-transition: all 250ms linear;
@@ -70,13 +70,12 @@ section.cta-alt {
                 &:hover {
                     transform: rotate(0) scale(1);
                 }
+                @media screen and (min-width: 1200px) {
+                    display:  inline;
+                }
             }
         }
     }
 }
 
-@media screen and (min-width: 1280px) {
-    section.cta-alt {
-        display: block;
-    }
-}
+

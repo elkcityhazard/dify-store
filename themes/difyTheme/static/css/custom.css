@@ -265,7 +265,6 @@ section.cta h4 {
 section.cta-alt {
   background: rgba(226, 115, 150, 0.5);
   color: #fff;
-  display: none;
   padding: 0;
 }
 section.cta-alt .row {
@@ -297,6 +296,7 @@ section.cta-alt .row .cta-cup {
 }
 section.cta-alt .row .cta-cup img {
   cursor: pointer;
+  display: none;
   transform: rotateX(7deg) rotateY(10deg) rotateZ(5deg) scale(0.97);
   transition: all 250ms linear;
   -webkit-transition: all 250ms linear;
@@ -306,12 +306,12 @@ section.cta-alt .row .cta-cup img {
 section.cta-alt .row .cta-cup img:hover {
   transform: rotate(0) scale(1);
 }
-
-@media screen and (min-width: 1280px) {
-  section.cta-alt {
-    display: block;
+@media screen and (min-width: 1200px) {
+  section.cta-alt .row .cta-cup img {
+    display: inline;
   }
 }
+
 .main-footer {
   background: #0c1821;
   color: #fff;
