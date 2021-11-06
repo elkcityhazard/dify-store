@@ -20,9 +20,7 @@
                                 <div class="col-12">
                                     <strong><i class="fa fa-address-card-o" aria-label="Author"></i></strong> <span>{{ .Params.author }}</span> 
                                     <strong><i class="fa fa-calendar" aria-label="Date Published"></i></strong> <span>{{ time.Format "Monday, Jan 2, 2006" .Date }}</span>
-                                        {{ range (.GetTerms "tags") }}
-                                            <a href="{{ .Permalink }}" class="btn btn-secondary rounded-pill tag">{{ .LinkTitle }}</a>
-                                        {{ end }}
+                                        
                                     </ul>
                                 </div>
                             </div>

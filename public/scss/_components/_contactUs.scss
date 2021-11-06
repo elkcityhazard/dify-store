@@ -1,0 +1,10 @@
+section.contact-us {
+    .nav-link {
+        color: #000;
+        transition: all 250ms ease;
+        -webkit-transition: all 250ms ease;
+        &:hover {
+            color: rgba(234, 154, 178);
+        }
+    }
+}

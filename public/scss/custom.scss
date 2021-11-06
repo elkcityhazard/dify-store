@@ -1,0 +1,13 @@
+@import './_components/logoBar';
+@import './_components/swiper.scss';
+@import './_components/featuredProducts.scss';
+@import './_components/testimonials';
+@import './_components/cta';
+@import './_components/_footer.scss';
+@import './_components/contactUs.scss';
+@import './_components/single.scss';
+
+html,
+body {
+    overflow-x: hidden;
+}
