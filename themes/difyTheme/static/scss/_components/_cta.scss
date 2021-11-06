@@ -34,6 +34,9 @@ section.cta-alt {
     background: rgba(226, 115, 150, 0.5);
     color: #fff;
     padding: 0;
+    position: relative;
+    opacity: 1;
+    z-index: 2;
     .row {
         height: 100%;
         width: 100%;
@@ -59,14 +62,14 @@ section.cta-alt {
             transition: all 250ms linear;
             -webkit-transition: all 250ms linear;
             z-index: 99999;
-            img {
+            img.depth {
                 cursor: pointer;
                 display: none;
                 transform: rotateX(7deg) rotateY(10deg) rotateZ(5deg) scale(0.97);
                 transition: all 250ms linear;
             -webkit-transition: all 250ms linear;
             position: relative;
-            z-index: 999;
+            z-index: 100000;
                 &:hover {
                     transform: rotate(0) scale(1);
                 }

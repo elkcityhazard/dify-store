@@ -266,6 +266,9 @@ section.cta-alt {
   background: rgba(226, 115, 150, 0.5);
   color: #fff;
   padding: 0;
+  position: relative;
+  opacity: 1;
+  z-index: 2;
 }
 section.cta-alt .row {
   height: 100%;
@@ -294,20 +297,20 @@ section.cta-alt .row .cta-cup {
   -webkit-transition: all 250ms linear;
   z-index: 99999;
 }
-section.cta-alt .row .cta-cup img {
+section.cta-alt .row .cta-cup img.depth {
   cursor: pointer;
   display: none;
   transform: rotateX(7deg) rotateY(10deg) rotateZ(5deg) scale(0.97);
   transition: all 250ms linear;
   -webkit-transition: all 250ms linear;
   position: relative;
-  z-index: 999;
+  z-index: 100000;
 }
-section.cta-alt .row .cta-cup img:hover {
+section.cta-alt .row .cta-cup img.depth:hover {
   transform: rotate(0) scale(1);
 }
 @media screen and (min-width: 1200px) {
-  section.cta-alt .row .cta-cup img {
+  section.cta-alt .row .cta-cup img.depth {
     display: inline;
   }
 }
@@ -317,7 +320,7 @@ section.cta-alt .row .cta-cup img:hover {
   color: #fff;
   font-family: "Raleway", sans-serif;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 .main-footer a {
   color: #b3dee2;
