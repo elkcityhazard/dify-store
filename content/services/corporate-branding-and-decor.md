@@ -1,5 +1,6 @@
 ---
 title: "Corporate Branding & Decor"
+layout: single-service
 description: hello world
 image : "images/slider/corporate-branding-and-decor.jpg"
 author: Andrew

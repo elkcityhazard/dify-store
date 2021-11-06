@@ -1,5 +1,6 @@
 ---
 title: Jewelry
+layout: single-service
 description: hello world
 image : "images/products/jewelry-300x300.webp"
 author: Andrew

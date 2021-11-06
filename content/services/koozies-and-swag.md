@@ -1,5 +1,6 @@
 ---
 title: Koozies & Swag
+layout: single-service
 description: hello world
 image : "images/products/coozies-300x300.webp"
 author: Andrew

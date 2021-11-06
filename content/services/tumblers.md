@@ -1,5 +1,6 @@
 ---
 title: Tumblers
+layout: single-service
 description: hello world
 image : "images/products/crocin-300x300.webp"
 author: Andrew

@@ -1,6 +1,7 @@
 ---
 title: "T-Shirts"
 description: hello world
+layout: single-service
 image : "images/products/coozies-300x300.webp"
 author: Andrew
 date: 2021-11-04
