@@ -3,9 +3,9 @@
 {{ $related := .Site.RegularPages.Related . | first 5 }}
 {{ with $related }}
 <h3>See Also</h3>
-<ul class="list-group-flush">
+<ul class="list-group">
 	{{ range . }}
-	<li class="list-group-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+	<li class="list-group-item "><span class="fs-4 p-2">👉</span><a href="{{ .RelPermalink }}" class="text-dark text-decoration-none">{{ .Title }}</a></li>
 	{{ end }}
 </ul>
 {{ end }}

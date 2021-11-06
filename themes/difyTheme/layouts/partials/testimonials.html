@@ -7,16 +7,16 @@
       </div>
       <div class="row">
         {{ range .Site.Data.testimonials }}
-        <div class="col-12 col-md-4 mx-auto text-center">
+        <div class="col-12 col-md-3 mx-auto text-center">
             
               <img src="{{ .src | absURL }}" class="rounded-circle img-fluid mx-auto" loading="lazy" decoding="async" alt="{{ .name }}" height="300" width="300">
 
             <div class="row">
-              <div class="col d-flex align-items-center justify-content-evenly fs-2 p-3 stars">
+              <div class="col d-flex align-items-center justify-content-center fs-2 stars">
                 {{ with .stars}}
                 {{ $stars := . }}
                 {{ range $i, $seq := (seq $stars)}}
-                <i class="fa fa-star"></i>
+                <i class="fa fa-star gold me-2 my-2"></i>
                 {{ end }}
                 {{ end }}
                 

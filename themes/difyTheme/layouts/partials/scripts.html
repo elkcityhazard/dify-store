@@ -111,4 +111,14 @@ window.addEventListener('load', () => {
   })
 })
 
+window.addEventListener('scroll', (e) => {
+  let counter = 0;
+  const topBar = document.querySelector('.logo-bar');
+  const {scrollTop} = document.documentElement;
+  counter = scrollTop;
+  console.log(counter)
+
+
+})
+
   </script>

@@ -1,5 +1,6 @@
 ---
 title: Service 1
+layout: single-service
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc lobortis mattis aliquam faucibus. Sociis natoque penatibus et magnis. Tellus integer feugiat scelerisque varius morbi enim. Sit amet dictum sit amet justo donec enim diam vulputate. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare. Auctor elit sed vulputate mi sit amet mauris commodo quis. Urna condimentum mattis pellentesque id nibh tortor id aliquet. In nisl nisi scelerisque eu ultrices vitae auctor. Risus commodo viverra maecenas accumsan lacus. Dictum sit amet justo donec enim diam vulputate. Egestas diam in arcu cursus. Non enim praesent elementum facilisis.
 

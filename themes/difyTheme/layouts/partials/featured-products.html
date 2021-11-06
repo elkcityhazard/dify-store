@@ -14,19 +14,19 @@
         {{- range .Site.Data.featuredProducts -}}
         <div class="col-12 col-md-6 col-lg-2 mx-auto my-4 featured-products__featured-product" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="250">
           <figure class="d-block align-items-center justify-content-center">
-            <a href="#" class="perspective rotate">
+            <a href="/contact-us" class="perspective rotate">
               <img src="{{- .src | absURL -}}" class="rounded-circle shadow featured-products__featured-product__thumbnail" alt="{{- .title -}}" loading="lazy" decoding="async">
             </a>
             <img src="{{- .blob | absURL -}}" class="blob" alt="blob" loading="lazy" decoding="async" height="400" width="400">            
           </figure>
-          <h3 class=" my-2 p-2"><a href="#" class="thumb-title text-decoration-none text-white" title="{{- .title -}}">{{- .title -}}</a></h3>
+          <h3 class=" my-2 p-2"><a href="/contact-us" class="thumb-title text-decoration-none text-white" title="{{- .title -}}">{{- .title -}}</a></h3>
         </div>
 
         {{- end -}}
       </div>
       <div class="row mt-5">
         <div class="col p-3 mx-auto" data-aos="fade-in" data-aos-duration="1250" data-aos-delay="350">
-          <a href="#" class="cta-btn">CONTACT US</a>
+          <a href="/contact-us" class="cta-btn">CONTACT US</a>
         </div>
       </div>
     </section>

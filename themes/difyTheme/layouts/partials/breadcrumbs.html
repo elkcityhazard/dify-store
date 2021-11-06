@@ -1,8 +1,13 @@
 
-<section class="breadcrumbs container-fluid">
+<section class="breadcrumbs container-fluid p-0">
   <div class="row">
     <div class="col-12">
-      <ol  class="list-group-flush">
+      <h3 class="">Breadcrumbs</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <ul  class="list-group">
         {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
       </ol>
       {{ define "breadcrumbnav" }}
@@ -11,8 +16,8 @@
       {{ else if not .p1.IsHome }}
       {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
       {{ end }}
-      <li class="list-group-item">
-        <a href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
+      <li class="list-group-item"><span class="fs-4 pe-2">👉</span>
+        <a href="{{ .p1.Permalink }}" class="text-decoration-none text-dark">{{ .p1.Title }}</a>
       </li>
       {{ end }}
     </div>
