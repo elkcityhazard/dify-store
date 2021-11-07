@@ -1,7 +1,7 @@
 ---
 title: "Corporate Branding & Decor"
 layout: single-service
-description: hello world
+description: "hello world"
 image : "images/slider/corporate-branding-and-decor.jpg"
 author: Andrew
 date: 2021-11-04

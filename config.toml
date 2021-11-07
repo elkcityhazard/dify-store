@@ -7,8 +7,8 @@ theme = "difyTheme"
 [params]
     author = "Andrew M McCall"
     description = "Dify Store is an arts and crafts blog and e-commerce store front."
-    opengraphdefault = "{{ .Site.BaseURL}}images/logo.png"
-    imgAltDefault = "{{ .Site.BaseURL}}images/logo.png"
+    opengraphdefault = "/images/logo.png"
+    imgAltDefault = "/images/logo.png"
 
 
 [[params.social]]

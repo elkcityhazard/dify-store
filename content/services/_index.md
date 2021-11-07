@@ -1,5 +1,6 @@
 ---
 title: services
+description: "hello world"
 services:
 # service item loop
 - name : "Koozies and Swag"

@@ -1,6 +1,6 @@
 ---
 title: "Blog 1"
-description: hello world
+description: "hello world"
 image : "images/slider/corporate-branding-and-decor.jpg"
 author: Andrew
 date: 2021-11-01

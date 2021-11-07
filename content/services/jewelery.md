@@ -1,7 +1,7 @@
 ---
 title: Jewelry
 layout: single-service
-description: hello world
+description: "hello world"
 image : "images/products/jewelry-300x300.webp"
 author: Andrew
 date: 2021-11-04

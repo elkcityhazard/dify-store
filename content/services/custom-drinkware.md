@@ -1,7 +1,7 @@
 ---
 title: Custom Drinkware
 layout: single-service
-description: hello world
+description: "hello world"
 author: Andrew
 date: 2021-11-04
 image : "images/products/long-day-cup-300x300.webp"
