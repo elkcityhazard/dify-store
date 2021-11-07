@@ -8,7 +8,6 @@ category:
     - Blog  
 tags:
     - Blog
-    - Blog
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus mattis molestie a iaculis at erat. Magna fermentum iaculis eu non diam phasellus vestibulum lorem. Eu turpis egestas pretium aenean pharetra magna ac placerat. In pellentesque massa placerat duis ultricies. Morbi tristique senectus et netus et malesuada. Sollicitudin ac orci phasellus egestas tellus. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Suspendisse ultrices gravida dictum fusce ut placerat orci. Habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat. In metus vulputate eu scelerisque. Faucibus et molestie ac feugiat sed lectus vestibulum. Interdum varius sit amet mattis vulputate enim nulla aliquet. Arcu non odio euismod lacinia at quis risus sed vulputate. Lectus proin nibh nisl condimentum id venenatis a.
 
