@@ -1,4 +1,11 @@
 <!-- Logo Bar -->
+<div class="mobile-nav d-md-none">
+  <button class="hamburger-container">
+    <span class="hamburger-icon"></span>
+    <span class="hamburger-icon"></span>
+    <span class="hamburger-icon"></span>
+  </button>
+</div>
 <div class="container-fluid py-3 logo-bar">
     <div class="row d-flex justify-content-center align-items-center mb-3">
       <div class="col-12 text-center">
@@ -13,7 +20,7 @@
         </a>
       </div>
     </div>
-    <div class="row d-flex-justify-content-center align-items-center mb-3">
+    <div class="row d-flex-justify-content-center align-items-center mb-3 d-none d-md-block">
         <div class="container">
             <nav class="text-center d-flex flex-wrap align-items-center justify-content-center">
               {{range .Site.Menus.main}}
@@ -25,3 +32,21 @@
   </div>
 
   <!-- End Logo Bar-->
+
+
+  <!-- side drawer -->
+  <aside class="container-fluid d-md-none mobile-sidebar">
+
+    <nav class="text-center d-flex flex-wrap align-items-center justify-content-center">
+      <ul class="list-group-flush">
+
+        {{range .Site.Menus.main}}
+        <li class="list-group-item">
+          <a href="{{.URL | absURL}}" class="py-1 px-2 mx-3 text-decoration-none btn nav-link">{{- .Name -}}</a>
+        </li>
+    {{ end }}
+
+      </ul>
+    </nav>
+
+  </aside>

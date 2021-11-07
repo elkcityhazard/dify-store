@@ -32,7 +32,7 @@ services:
   url: "services/t-shirts"
   
 # service item loop
-- name : "Corporate Branding & Decor"
+- name : "Branding & Decor"
   image : "images/slider/corporate-branding-and-decor.jpg"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id neque aliquam vestibulum morbi."
   url: "services/corporate-branding-and-decor"

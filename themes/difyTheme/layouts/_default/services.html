@@ -13,37 +13,40 @@
 
 <!-- Product Cards -->
 
-
-<section class="card-wrapper py-3" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="150">
+<section class="fancy-cards py-3">
     <div class="container">
-        <div class="row">
-            {{ range .Params.services}}
-            <div class="col-12 col-md-4 my-2 mx-auto">
-                <div class="card text-white card-has-bg click-col lazyBG"
-                    data-background="{{ .image | absURL}}">
-                    <img class="card-img d-none" src="{{ .image | absURL}}"
-                        alt="{{ .name}}" loading="lazy" decoding="async">
-                        <a href="{{ .url | absURL}}" class="text-decoration-none text-dark">
-                    <div class="card-img-overlay d-flex flex-column">
+        <div class="row justify-content-center align-items-center;">
+            {{- range .Params.services -}}
+            <div class="col col-12 col-md-6 col-lg-3 m-3 rounded-3 shadow p-2" data-aos="fade-up-right" data-aos-duration="1250" data-aos-delay="150">
+                    <div data-background="{{ .image | absURL}}" class="card fancy lazyBG h-100">
+                        <div class="inner-card h-100 rounded-2">
+                            <div class="card-header">
+                                <img class="card-img d-none" src="{{ .image | absURL}}"
+                                alt="{{ .name}}" loading="lazy" decoding="async">
+                            </div>
                             <div class="card-body">
-                                <small class="card-meta mb-2 ">SERVICE</small>
-                                <h4 class="card-title mt-0 "><a class="text-light" href="{{- .url | absURL -}}">{{- .name -}}</a></h4>
-                                <p class="text-light">{{ .description }}</p>
+                                    <div class="col-12">
+                                        <small class="mb-3"><a href="{{ .url | absURL}}" class="text-decoration-none text-white">SERVICE</a></small>
+                                        <h4 class="card-title"><a class="text-decoration-none" href="{{- .url | absURL -}}">{{- .name -}}</a></h4>
+                                        <p class="text-light">
+                                            <a class="text-light text-decoration-none" href="{{- .url | absURL -}}">{{- .description -}}</a></h4>
+                                        </p>
+                                    </div>        
                             </div>
                             <div class="card-footer">
                                 <div class="media text-center">
-                                    <a href="{{ .url | absURL}}" class="cta-btn">{{ .name }}</a>
+                                    <a href="{{ .url | absURL}}" class="cta-btn card-btn">{{ .name }}</a>
                                 </div>
                             </div>
-                        </a>
-                    </div>
+
+                        </div>    
+                    </div>                    
                 </div>
-            </div>
-            {{ end }}
+                {{- end -}}
         </div>
     </div>
-</section>
 
+</section>
 <!-- end product cards-->
 
 {{ end }}

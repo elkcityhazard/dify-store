@@ -96,7 +96,7 @@ entries.forEach(entry => {
     entry.target.style.backgroundPosition = "center center"
     observer.unobserve(entry.target)
   } else {
-    entry.target.classList.remove('fancy');
+    return 
   }
 });
 });
@@ -110,6 +110,19 @@ window.addEventListener('load', () => {
     slide.style.backgroundImage = `url('${slide.getAttribute('data-background')}')`
   })
 })
+
+
+function toggleNav() {
+  const mobileToggle = document.querySelector('.hamburger-container');
+  const mobileMenu = document.querySelector('.mobile-sidebar')
+
+  mobileToggle.addEventListener('click', (e) => {
+    mobileToggle.classList.contains('active') ? mobileToggle.classList.remove('active') : mobileToggle.classList.add('active');
+    mobileToggle.classList.contains('active') ? mobileMenu.style.height = mobileMenu.scrollHeight + 'px' :mobileMenu.style.height = 0 + 'px' ;
+  })
+}
+
+toggleNav();
 
 
 
