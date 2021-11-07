@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     {{- partial "head.html" . -}}
-    <body>
+    <body id="top">
         {{- partial "navigation.html" . -}}
         {{- partial "header.html" . -}}
         <main id="content d-flex container mx-auto">
@@ -13,5 +13,6 @@
         {{- partial "cta.html" . -}}
         {{- partial "footer.html" . -}}
         {{- partial "scripts.html" . -}}
+        {{- partial "backToTop.html" . -}}
     </body>
 </html>

@@ -39,21 +39,19 @@
             <!-- Page Nav -->
             <section class="content box mx-auto mb-2">
                 <div class="row justify-content-center align-items-center text-center">
-                    <div class="col text-center">
+                    <div class="col-3 float-right pe-2 text-center">
                     {{with .Site.RegularPages.Prev . }}
-                    <a href="{{.RelPermalink}}" class="btn">{{ .Title }} 👈</a>
+                    <a href="{{.RelPermalink}}" class="btn">👈 {{ .Title }}</a>
                     {{ end }}
                 </div>
-                <div class="col-2">
-                    <i class="fa fa-arrows-h fs-1 text-dark d-none"></i>
-                </div>
-                <div class="col text-center">
+                <div class="col-3 float-left ps-2 text-center">
                     {{with .Site.RegularPages.Next . }}
-                    <a href="{{.RelPermalink}}" class="btn"> 👉 {{ .Title }}</a>
+                    <a href="{{.RelPermalink}}" class="btn">👉 {{ .Title }}</a>
                     {{ end }}
                 </div>
             </div>
             </section>
+            <!-- end page nav-->
         </div>
         <div class="col-12 col-md-3">
             {{ partial "aside.html" . }}

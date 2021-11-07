@@ -125,5 +125,11 @@ function toggleNav() {
 toggleNav();
 
 
+// back to top toggle
+document.addEventListener('scroll', () => {
+  const { scrollTop } = document.documentElement
+  const icon = document.getElementById('quickNav')
+  scrollTop < 100 ? icon.style.opacity = 0 : icon.style.opacity = 0.5;
+})
 
   </script>
