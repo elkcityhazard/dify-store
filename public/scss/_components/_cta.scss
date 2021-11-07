@@ -33,8 +33,10 @@ section.cta {
 section.cta-alt {
     background: rgba(226, 115, 150, 0.5);
     color: #fff;
-    display: none;
     padding: 0;
+    position: relative;
+    opacity: 1;
+    z-index: 3;
     .row {
         height: 100%;
         width: 100%;
@@ -53,30 +55,30 @@ section.cta-alt {
             height: 350px;
             width: 350px;
             top: 25%;
-            left: 80%;
+            right: 0%;
             perspective: 250px;
             transform-style: preserve-3d;
             transform: translate(0%, -50%);
             transition: all 250ms linear;
             -webkit-transition: all 250ms linear;
-            z-index: 99999;
-            img {
+            z-index: 4;
+            img.depth {
                 cursor: pointer;
+                display: none;
                 transform: rotateX(7deg) rotateY(10deg) rotateZ(5deg) scale(0.97);
                 transition: all 250ms linear;
             -webkit-transition: all 250ms linear;
             position: relative;
-            z-index: 999;
+            z-index: 5;
                 &:hover {
                     transform: rotate(0) scale(1);
+                }
+                @media screen and (min-width: 1200px) {
+                    display:  inline;
                 }
             }
         }
     }
 }
 
-@media screen and (min-width: 1280px) {
-    section.cta-alt {
-        display: block;
-    }
-}
+

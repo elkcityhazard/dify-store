@@ -1,4 +1,6 @@
 @import './_components/logoBar';
+@import './_components/_backToTop.scss';
+@import './_components/mobileNav';
 @import './_components/swiper.scss';
 @import './_components/featuredProducts.scss';
 @import './_components/testimonials';
@@ -12,4 +14,6 @@
 
 // Single Pages
 @import './_components/services';
+
+
 

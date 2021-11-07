@@ -1,7 +1,6 @@
 .logo-bar {
   margin-bottom: 0;
   position: relative;
-  box-shadow: 0 -2px 20px -10px rgba(0, 0, 0, 0.5);
 }
 .logo-bar::after {
   background: linear-gradient(0.25turn, #046582, #6e7582, #bb8082, #f39189, #fff);
@@ -20,6 +19,117 @@
   -webkit-transition: all 250ms ease;
 }
 .logo-bar .nav-link:hover {
+  color: #ea9ab2;
+}
+
+.back-to-top {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  z-index: 100000000000000030000000;
+  transition: all 350ms ease;
+  -webkit-transition: all 350ms ease;
+  -moz-transition: all 350ms ease;
+}
+.back-to-top .rounded-circle {
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  width: 50px;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+}
+.back-to-top .rounded-circle:hover {
+  background: rgba(0, 0, 0, 0.33);
+}
+.back-to-top .rounded-circle .circle {
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  width: 50px;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+}
+.back-to-top .rounded-circle .circle a {
+  color: #000;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  text-shadow: 0px 0px 4px #fff;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+}
+.back-to-top .rounded-circle .circle a:hover {
+  color: white;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  z-index: 10000;
+}
+.mobile-nav .hamburger-container {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  height: 50px;
+  width: 50px;
+  transition: all 250ms linear;
+  -webkit-transition: all 250ms linear;
+  -moz-transition: all 250ms linear;
+}
+.mobile-nav .hamburger-container .hamburger-icon {
+  background: #000;
+  display: block;
+  height: 5px;
+  margin: 0.25rem auto;
+  padding: 0.25rem 0 rem;
+  width: 30px;
+  transition: all 250ms linear;
+  -webkit-transition: all 250ms linear;
+  -moz-transition: all 250ms linear;
+}
+.mobile-nav .hamburger-container.active .hamburger-icon:nth-child(1) {
+  transform: translate3D(0, 175%, 0) rotateZ(765deg);
+}
+.mobile-nav .hamburger-container.active .hamburger-icon:nth-child(2) {
+  opacity: 0;
+}
+.mobile-nav .hamburger-container.active .hamburger-icon:nth-child(3) {
+  transform: translate3D(0, -175%, 0) rotateZ(-765deg);
+}
+
+.mobile-sidebar {
+  height: 0;
+  overflow: hidden;
+  transition: all 250ms linear;
+}
+.mobile-sidebar a {
+  color: #000;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+}
+.mobile-sidebar a:hover {
   color: #ea9ab2;
 }
 
@@ -64,13 +174,28 @@
   }
 }
 .featured-products {
-  background: rgba(234, 154, 178, 0.5);
+  background: #ea9ab2 no-repeat center center/cover;
   color: #fff;
   min-height: 100vh;
   position: relative;
   text-align: center;
   overflow: hidden;
-  z-index: -1;
+  z-index: 0;
+}
+@media screen and (min-width: 768px) {
+  .featured-products {
+    background: rgba(234, 154, 178, 0.5) url("../images/backgrounds/scissor-background-768x432.jpg") center center/contain;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .featured-products {
+    background: rgba(234, 154, 178, 0.5) url("../images/backgrounds/scissor-background-1366x768.jpg") no-repeat center center/cover;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .featured-products {
+    background: rgba(234, 154, 178, 0.5) url("../images/backgrounds/scissor-background-1920x1080.jpg") no-repeat center center/cover;
+  }
 }
 .featured-products h3 {
   font-family: "Dancing Script", cursive;
@@ -265,8 +390,10 @@ section.cta h4 {
 section.cta-alt {
   background: rgba(226, 115, 150, 0.5);
   color: #fff;
-  display: none;
   padding: 0;
+  position: relative;
+  opacity: 1;
+  z-index: 3;
 }
 section.cta-alt .row {
   height: 100%;
@@ -287,37 +414,38 @@ section.cta-alt .row .cta-cup {
   height: 350px;
   width: 350px;
   top: 25%;
-  left: 80%;
+  right: 0%;
   perspective: 250px;
   transform-style: preserve-3d;
   transform: translate(0%, -50%);
   transition: all 250ms linear;
   -webkit-transition: all 250ms linear;
-  z-index: 99999;
+  z-index: 4;
 }
-section.cta-alt .row .cta-cup img {
+section.cta-alt .row .cta-cup img.depth {
   cursor: pointer;
+  display: none;
   transform: rotateX(7deg) rotateY(10deg) rotateZ(5deg) scale(0.97);
   transition: all 250ms linear;
   -webkit-transition: all 250ms linear;
   position: relative;
-  z-index: 999;
+  z-index: 5;
 }
-section.cta-alt .row .cta-cup img:hover {
+section.cta-alt .row .cta-cup img.depth:hover {
   transform: rotate(0) scale(1);
 }
-
-@media screen and (min-width: 1280px) {
-  section.cta-alt {
-    display: block;
+@media screen and (min-width: 1200px) {
+  section.cta-alt .row .cta-cup img.depth {
+    display: inline;
   }
 }
+
 .main-footer {
   background: #0c1821;
   color: #fff;
   font-family: "Raleway", sans-serif;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 .main-footer a {
   color: #b3dee2;
@@ -413,83 +541,97 @@ article.article .card-number span {
   border-radius: 50%;
 }
 
-.card {
-  border: none;
-  font-family: "Raleway", sans-serif;
-  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-  overflow: hidden;
-  border-radius: 20px;
+section.fancy-cards .container .row .col {
   min-height: 450px;
-  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
 }
-@media (max-width: 768px) {
-  .card {
-    min-height: 350px;
+section.fancy-cards .container .row .col .card {
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+}
+section.fancy-cards .container .row .col .card .inner-card {
+  background: rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+}
+@media screen and (min-width: 320px) {
+  section.fancy-cards .container .row .col .card .inner-card {
+    background: rgba(0, 0, 0, 0.75);
   }
 }
-@media (max-width: 420px) {
-  .card {
-    min-height: 300px;
+section.fancy-cards .container .row .col .card .inner-card .card-header {
+  background: unset;
+  border: unset;
+  box-shadow: unset;
+}
+section.fancy-cards .container .row .col .card .inner-card .card-body {
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+}
+section.fancy-cards .container .row .col .card .inner-card .card-body p {
+  transition: all 350ms ease 100ms;
+  -webkit-transition: all 350ms ease 100ms;
+  -moz-transition: all 350ms ease 100ms;
+  opacity: 0;
+}
+@media screen and (min-width: 320px) {
+  section.fancy-cards .container .row .col .card .inner-card .card-body p {
+    opacity: 1;
   }
 }
-.card.card-has-bg {
-  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-  background-size: 120%;
-  background-repeat: no-repeat;
-  background-position: center center;
+section.fancy-cards .container .row .col .card .inner-card .card-body .card-title a {
+  color: white;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
 }
-.card.card-has-bg:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: inherit;
+section.fancy-cards .container .row .col .card .inner-card .card-footer {
+  background: unset;
+  border: unset;
+  box-shadow: unset;
 }
-.card.card-has-bg:before:hover {
-  transform: scale(0.98);
-  box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.3);
-  background-size: 130%;
-  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+section.fancy-cards .container .row .col .card .inner-card .card-footer .card-btn {
+  background: transparent;
+  box-shadow: initial;
+  outline: 1px solid #fff;
 }
-.card.card-has-bg:before:hover .card-img-overlay {
-  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-  background: rgba(179, 222, 226, 0.75);
+section.fancy-cards .container .row .col .card .inner-card .card-footer .card-btn:hover {
+  background: #fff;
+  color: #000;
+  outline: 1px solid #000;
+  text-shadow: none !important;
 }
-.card.card-has-bg .card-footer {
-  background: none;
-  border-top: none;
-}
-.card.card-has-bg .card-footer .media img {
-  border: solid 3px rgba(234, 95, 0, 0.3);
-}
-.card.card-has-bg .card-meta {
-  color: orange;
-}
-.card.card-has-bg .card-body {
-  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-.card.card-has-bg:hover {
-  cursor: pointer;
-  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-.card.card-has-bg:hover .card-body {
-  margin-top: 30px;
-  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-.card.card-has-bg .card-img-overlay {
-  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-  background: rgba(0, 0, 0, 0.66);
-}
-.card.card-has-bg .card-img-overlay:hover {
+section.fancy-cards .container .row .col .card:hover .inner-card {
   background: rgba(0, 0, 0, 0.25);
 }
-.card.card-has-bg .card-img-overlay:hover a,
-.card.card-has-bg .card-img-overlay:hover p,
-.card.card-has-bg .card-img-overlay:hover small {
+section.fancy-cards .container .row .col .card:hover .inner-card .card-body a {
+  color: #fff;
+  text-shadow: 2px 2px 1px #000;
+}
+section.fancy-cards .container .row .col .card:hover .inner-card .card-body p {
+  opacity: 1;
+}
+section.fancy-cards .container .row .col .card:hover .inner-card .card-body p a {
   color: #fff !important;
   text-shadow: 2px 2px 1px #000;
+}
+section.fancy-cards .container .row .col .card:hover .inner-card .card-footer {
+  opacity: 1;
+}
+section.fancy-cards .container .row .col .card:hover .inner-card .card-footer .card-btn {
+  outline-color: #fff;
+  text-shadow: 2px 2px 1px #000;
+}
+section.fancy-cards .container .row .col .card.fancy {
+  height: 100%;
+  min-height: 450px !important;
+}
+section.fancy-cards .container .row .col .card.fancy .inner-card {
+  height: 100%;
+  min-height: 450px;
 }
 
 /*# sourceMappingURL=custom.css.map */

@@ -1,11 +1,21 @@
 .featured-products {
-  background: rgba(234, 154, 178, 0.5);
+  background: rgba(234, 154, 178, 1) no-repeat center center / cover;
   color: #fff;
   min-height: 100vh;
   position: relative;
   text-align: center;
   overflow: hidden;
-  z-index: -1;
+  z-index: 0;
+
+  @media screen and (min-width: 768px) {
+    background: rgba(234, 154, 178, 0.5) url('../images/backgrounds/scissor-background-768x432.jpg')  center center / contain;
+  }
+  @media screen and (min-width: 1366px) {
+    background: rgba(234, 154, 178, 0.5) url('../images/backgrounds/scissor-background-1366x768.jpg') no-repeat center center / cover;
+    }
+    @media screen and (min-width: 1920px) {
+      background: rgba(234, 154, 178, 0.5) url('../images/backgrounds/scissor-background-1920x1080.jpg') no-repeat center center / cover;
+      }
   h3 {
     font-family: "Dancing Script", cursive;
     font-size: 3.5rem;
