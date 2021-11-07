@@ -7,13 +7,13 @@ theme = "difyTheme"
 [params]
     author = "Andrew M McCall"
     description = "Dify Store is an arts and crafts blog and e-commerce store front."
-    opengraphdefault = "{{ .Site.BaseURL}}/images/logo.jpg"
-    imgAltDefault = "Dify Store is an arts and crafts blog and e-commerce store front.."
+    opengraphdefault = "{{ .Site.BaseURL}}images/logo.png"
+    imgAltDefault = "{{ .Site.BaseURL}}images/logo.png"
 
 
 [[params.social]]
 name = "facebook"
-url = "https://www.facebook.com/mary.fortuna"
+url = "https://www.facebook.com/andrew-mccall"
 icon = "fa fa-facebook fa-2x"
 
 [markup.goldmark.renderer]
