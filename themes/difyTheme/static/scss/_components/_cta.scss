@@ -36,7 +36,7 @@ section.cta-alt {
     padding: 0;
     position: relative;
     opacity: 1;
-    z-index: 2;
+    z-index: 3;
     .row {
         height: 100%;
         width: 100%;
@@ -55,13 +55,13 @@ section.cta-alt {
             height: 350px;
             width: 350px;
             top: 25%;
-            left: 80%;
+            right: 0%;
             perspective: 250px;
             transform-style: preserve-3d;
             transform: translate(0%, -50%);
             transition: all 250ms linear;
             -webkit-transition: all 250ms linear;
-            z-index: 99999;
+            z-index: 4;
             img.depth {
                 cursor: pointer;
                 display: none;
@@ -69,7 +69,7 @@ section.cta-alt {
                 transition: all 250ms linear;
             -webkit-transition: all 250ms linear;
             position: relative;
-            z-index: 100000;
+            z-index: 5;
                 &:hover {
                     transform: rotate(0) scale(1);
                 }

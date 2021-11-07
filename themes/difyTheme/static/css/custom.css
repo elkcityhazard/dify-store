@@ -393,7 +393,7 @@ section.cta-alt {
   padding: 0;
   position: relative;
   opacity: 1;
-  z-index: 2;
+  z-index: 3;
 }
 section.cta-alt .row {
   height: 100%;
@@ -414,13 +414,13 @@ section.cta-alt .row .cta-cup {
   height: 350px;
   width: 350px;
   top: 25%;
-  left: 80%;
+  right: 0%;
   perspective: 250px;
   transform-style: preserve-3d;
   transform: translate(0%, -50%);
   transition: all 250ms linear;
   -webkit-transition: all 250ms linear;
-  z-index: 99999;
+  z-index: 4;
 }
 section.cta-alt .row .cta-cup img.depth {
   cursor: pointer;
@@ -429,7 +429,7 @@ section.cta-alt .row .cta-cup img.depth {
   transition: all 250ms linear;
   -webkit-transition: all 250ms linear;
   position: relative;
-  z-index: 100000;
+  z-index: 5;
 }
 section.cta-alt .row .cta-cup img.depth:hover {
   transform: rotate(0) scale(1);
