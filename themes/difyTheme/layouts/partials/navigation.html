@@ -38,11 +38,11 @@
   <aside class="container-fluid d-md-none mobile-sidebar">
 
     <nav class="text-center d-flex flex-wrap align-items-center justify-content-center">
-      <ul class="list-group-flush">
+      <ul class="list-group-flush ps-0 mx-auto">
 
         {{range .Site.Menus.main}}
-        <li class="list-group-item">
-          <a href="{{.URL | absURL}}" class="py-1 px-2 mx-3 text-decoration-none btn nav-link">{{- .Name -}}</a>
+        <li class="list-group-item p-0 mx-auto text-center">
+          <a href="{{.URL | absURL}}" class="mx-auto text-decoration-none btn nav-link">{{- .Name -}}</a>
         </li>
     {{ end }}
 
