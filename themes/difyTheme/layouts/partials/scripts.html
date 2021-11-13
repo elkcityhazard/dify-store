@@ -132,4 +132,13 @@ document.addEventListener('scroll', () => {
   scrollTop < 100 ? icon.style.opacity = 0 : icon.style.opacity = 0.5;
 })
 
+
+function setYear(id) {
+  const yearContainer = document.getElementById(id);
+  const currentYear = new Date().getFullYear();
+  yearContainer.innerText = currentYear
+}
+
+setYear('year')
+
   </script>
