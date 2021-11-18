@@ -136,6 +136,10 @@
 /************************
 **Custom Swiper Styles*** 
 *************************/
+.swiper {
+  min-height: 75vh;
+}
+
 .hero-slide {
   background: none;
   background-position-x: 100%;
@@ -150,6 +154,7 @@
 .hero-container {
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 1rem;
 }
 .hero-container h1 {
   font-size: 4rem;
@@ -313,6 +318,12 @@ a.cta-btn:focus {
   outline: 1px;
 }
 
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .featured-products__featured-product {
+    margin: 2rem auto !important;
+  }
+}
 .stars {
   color: #ffa500;
 }
@@ -632,6 +643,11 @@ section.fancy-cards .container .row .col .card.fancy {
 section.fancy-cards .container .row .col .card.fancy .inner-card {
   height: 100%;
   min-height: 450px;
+}
+
+img {
+  height: auto;
+  max-width: 100% !important;
 }
 
 /*# sourceMappingURL=custom.css.map */

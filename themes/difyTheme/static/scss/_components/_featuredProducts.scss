@@ -8,14 +8,20 @@
   z-index: 0;
 
   @media screen and (min-width: 768px) {
-    background: rgba(234, 154, 178, 0.5) url('../images/backgrounds/scissor-background-768x432.jpg')  center center / contain;
+    background: rgba(234, 154, 178, 0.5)
+      url("../images/backgrounds/scissor-background-768x432.jpg") center center /
+      contain;
   }
   @media screen and (min-width: 1366px) {
-    background: rgba(234, 154, 178, 0.5) url('../images/backgrounds/scissor-background-1366x768.jpg') no-repeat center center / cover;
-    }
-    @media screen and (min-width: 1920px) {
-      background: rgba(234, 154, 178, 0.5) url('../images/backgrounds/scissor-background-1920x1080.jpg') no-repeat center center / cover;
-      }
+    background: rgba(234, 154, 178, 0.5)
+      url("../images/backgrounds/scissor-background-1366x768.jpg") no-repeat
+      center center / cover;
+  }
+  @media screen and (min-width: 1920px) {
+    background: rgba(234, 154, 178, 0.5)
+      url("../images/backgrounds/scissor-background-1920x1080.jpg") no-repeat
+      center center / cover;
+  }
   h3 {
     font-family: "Dancing Script", cursive;
     font-size: 3.5rem;
@@ -61,7 +67,7 @@
   position: relative;
   a.thumb-title {
     position: relative;
-    z-index: 99999
+    z-index: 99999;
   }
   .blob {
     position: absolute;
@@ -99,42 +105,47 @@
 }
 
 .rotate:hover + .blob {
-        transform: translate3D(-50%, -50%, 0) rotateZ(20deg) scale(1.5);
-        opacity: 1;
-      
+  transform: translate3D(-50%, -50%, 0) rotateZ(20deg) scale(1.5);
+  opacity: 1;
 }
 
 a.cta-btn {
-	box-sizing: border-box;
-	border: 0px;
-	font-size: 18px;
-	font-style: inherit;
-	font-weight: 500;
-	margin: 0px;
-	outline: 0px;
-	padding: 20px 40px;
-    position: relative;
-	vertical-align: baseline;
-	background-color: rgb(7, 67, 107);
-	text-decoration: none;
-	color: rgb(255, 255, 255);
-	transition: all 0.3s ease 0s;
-	box-shadow: rgba(0, 0, 0, 0.5) 4px 6px 12px 0px;
-	width: auto;
-	display: inline-block;
-	line-height: 1;
-	border-radius: 30px;
-	fill: rgb(255, 255, 255);
-	text-align: center;
-	font-family: 'Raleway', sans-serif;
-    z-index: 10;
-    &:hover {
-        outline: 0px;
-        background-color: rgb(7, 67, 75);
-        color: rgb(255, 255, 255);
-    }
-    &:focus {
-        outline: 1px;
-    }
+  box-sizing: border-box;
+  border: 0px;
+  font-size: 18px;
+  font-style: inherit;
+  font-weight: 500;
+  margin: 0px;
+  outline: 0px;
+  padding: 20px 40px;
+  position: relative;
+  vertical-align: baseline;
+  background-color: rgb(7, 67, 107);
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease 0s;
+  box-shadow: rgba(0, 0, 0, 0.5) 4px 6px 12px 0px;
+  width: auto;
+  display: inline-block;
+  line-height: 1;
+  border-radius: 30px;
+  fill: rgb(255, 255, 255);
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  z-index: 10;
+  &:hover {
+    outline: 0px;
+    background-color: rgb(7, 67, 75);
+    color: rgb(255, 255, 255);
+  }
+  &:focus {
+    outline: 1px;
+  }
 }
-  
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .featured-products__featured-product {
+    margin: 2rem auto !important;
+  }
+}

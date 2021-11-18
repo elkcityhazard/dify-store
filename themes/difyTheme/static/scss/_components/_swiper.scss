@@ -3,46 +3,46 @@
 *************************/
 
 .swiper {
-    min-height: 75vh;
+  min-height: 75vh;
 }
 
-
 .hero-slide {
-    background: none;
-    background-position-x: 100%;
-    background-position-y: 50%;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed !important;
-    margin: 0 auto;
-    width: 100%;
+  background: none;
+  background-position-x: 100%;
+  background-position-y: 50%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed !important;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .hero-container {
-    background-size: cover;
-    background-repeat: no-repeat;
-    h1 {
-        font-size: 4.0rem;
-        font-weight: 700;
-    }
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+  }
 
-    h2 {
-        font-size: 3rem;
-        font-weight: 600;
-    }
+  h2 {
+    font-size: 3rem;
+    font-weight: 600;
+  }
 }
 .swiper-slider {
-    margin: 0 auto;
-    width: 100% !important;
+  margin: 0 auto;
+  width: 100% !important;
 }
 
 @media screen and (min-width: 1200px) {
-    .hero-container {
-        h1 {
-            font-size: 6rem;
-        }
-        h2 {
-            font-size: 5rem;
-        }
+  .hero-container {
+    h1 {
+      font-size: 6rem;
     }
+    h2 {
+      font-size: 5rem;
+    }
+  }
 }
