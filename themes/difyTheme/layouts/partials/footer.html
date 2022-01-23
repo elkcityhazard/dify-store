@@ -1,23 +1,18 @@
 <footer class="main-footer container-fluid" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="150">
     <div class="row w-75 mx-auto">
       <div class="col-12 col-md-9 mx-auto text-center p-3">
-        <h4 class="fs-1">The Dify Store</h4>
-        <p class="fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aperiam eveniet voluptates reprehenderit nesciunt inventore eius molestiae recusandae, facilis suscipit.</p>
+        <h4 class="fs-1 fw-boler">The Dify Store</h4>
+        <p class="fs-4">We Do. It. For. You. so you don't have to DIY.</p>
       </div>
     </div>
     <div class="row justify-content-center">
-      <div class="col-12 col-md-2">
-        <h4>Our Promise</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni at repudiandae iusto rerum consequatur quia recusandae voluptatem numquam tempore sequi!</p>
-      </div>
       <div class="col-12 col-md-3">
         <h4>Contact Info</h4>
         <address>
           <ul class="address-list list-group-flush">
-            <li class="p-1 list-group-item"><a href="tel:+18176581789"><i class="fa fa-phone me-3"></i>(817) 658-1789</a></li>
+            <li class="p-1 list-group-item d-none"><a href="tel:+18304430349"><i class="fa fa-phone me-3"></i>(830) 443-0349</a></li>
             <li class="p-1 list-group-item"><a href="mailto:thedifystore@gmail.com"><i class="fa fa-envelope me-3"></i>thedifystore@gmail.com</a></li>
             <li class="p-1"><a href="https://www.google.com/maps/place/Boerne,+TX+78006/@29.7887744,-98.7800578,13z/data=!3m1!4b1!4m5!3m4!1s0x865c76a1cbde3e75:0x1c91b7f64239262b!8m2!3d29.7946641!4d-98.7319703"><i class="fa fa-map-marker me-3"></i>Boerne, Texas</a></li>
-          
           </ul>
         </address>
       </div>
@@ -37,11 +32,19 @@
           {{ end }}
           </ul>
       </div>
+      <div class="col-12 col-md-2">
+        <h4>Follow Us</h4>
+        <ul class="list-group-flush bg-transparent">
+          {{ range .Site.Params.social }}
+          <li class="p-1 mb-1 list-group-item bg-transparent border-none"><a href="{{ .url | absURL}}">{{ if .image }} <img src="{{ .image | absURL}}" alt="icon" loading="lazy" class="p-0 me-3" decoding="async" height="16px" width="16px"> {{ else }}<i class="{{ .icon }} me-3"></i> {{ end }} {{ .name }}</a></li>
+        {{ end }}
+        </ul>
+      </div>
     </div>
     <div class="row h-100 bottom-bar">
       <div class="container">
         <div class="col text-center mx-auto">
-          <p>Copyright &copy; 2020-<span id="year"></span> <a href="{{.Site.BaseURL}}">{{.Site.Title}}</a> | Website developed by <a href="https://andrew-mccall.com" target="blank">Andrew M McCall</a></p>
+          <p>Copyright &copy; 2020-<span id="year"></span> <a href="{{.Site.BaseURL}}">{{.Site.Title}}</a> | Website developed by <a href="https://schrader.co" rel="noopenner noreferrer" target="_blank">Schrader Web Solutions</a></p>
         </div>
       </div>
     </div>

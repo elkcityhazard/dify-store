@@ -1,10 +1,6 @@
 <!-- CTA -->
 
-{{ if .Params.ctaAlt}}
-
-<!-- Alternative CTA -->
-
-<section data-background="{{- .Site.BaseURL -}}images/cta/wood-grain-1920x200.png" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="100" class="cta cta-alt container-fluid lazyBG">
+<section data-background="{{- .Site.BaseURL -}}images/cta/wood-grain-1920x200.png" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="100" class="cta d-none cta-alt container-fluid lazyBG">
   <div class="row py-3">
     <div class="col-12 col-sm-12 col-lg-9 offset-lg-1 text-center">
       <h4 class="fs-1">Limited Time Offer: Buy One Get One Free</h4>
@@ -23,15 +19,17 @@
 
 <!-- End Alternative CTA-->
 
-{{ else }}
-
 <section data-background="{{- .Site.BaseURL -}}images/testimonials/testimonial-1920x1080.jpeg" data-aos="fade-up" data-aos-duration="1250" data-aos-delay="150"  class="cta container-fluid lazyBG">
     <div class="container-fluid text-center">
       <div class="row  my-3 py-5">
         <div class="col-12 col-md-9 text-center mx-auto">
-            <h4 class="fs-1 w-1">Do you want to make your own gifts?</h4>
-              <p>Dify is an online service that makes custom gifts for you so that you don't have to. It's easy, fun and totally customizable. You can upload pictures of yourself or your loved ones and we will create a portrait using fun, colorful designs. If you're not quite ready for something this personal, our pre-made designs are the perfect way to get started! We also offer DIY holiday cards and invitations as well as DIY party supplies like cupcake wrappers, table runners and more!</p>
-            <p>With Dify, creating custom gifts has never been easier. Browse through our wide selection of unique gift ideas or upload your own photos to create</p>
+            <h4 class="fs-1 w-1">Have you ever wonder if there is someone in town who makes .... ?</h4>
+              <p>
+                Here at the DIFY, <strong>we Do. It. For. You. (DIFY) so you don't have to Do. It. Yourself. (DIY).</strong> <br/><br> 
+                We work on everything from spirit wear and glitter tumblers to full scale corporate branding with screen printing, embroidery, and laser engraving. <br/><br> 
+                Whether it's a gift for her, him, the kids, employees, or Y.O.U., we at The DIFY have you covered. <br/><br> 
+                There is no project too big or too small. Choose from our wide variety of pre-designed products or fill out the contact form to begin a custom project of your own. <br/><br> 
+              </p>
             <a class="btn cta-btn" href="/contact-us" role="button">Contact Us</a>
             </div>
       </div>
@@ -41,4 +39,4 @@
 
   <!-- End CTA -->
 
-  {{ end }}
+  

@@ -1,9 +1,10 @@
 [{
     "id": 0,
-    "src": "images/slider/hero-slider-1-1920x1080.jpg",
+    "src": "images/backgrounds/blue-bg-paintbrushes.webp",
     "img" : "images/backgrounds/cup-1-400.png",
     "h1": "WE MAKE",
-    "h2" : "MEMORIES"
+    "h2" : "MEMORIES",
+    "hide" : true
 },
 {
     "id": 1,

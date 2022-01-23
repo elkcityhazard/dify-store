@@ -2,31 +2,33 @@
     {
         "id" : 0,
         "src" : "images/products/crocin-300x300.webp",
-        "title" : "Custom Drinkware",
+        "title" : "Tumblers",
         "blob" : "images/blobs/blob-1.svg"
     },
     {
         "id" : 1,
-        "src" : "images/products/long-day-cup-300x300.webp",
-        "title" : "Custom Drinkware",
+        "src" : "images/coming-soon.jpg",
+        "title" : "Laser Engraving",
         "blob" : "images/blobs/blob-2.svg"
     },
     {
         "id" : 2,
-        "src" : "images/products/coozies-300x300.webp",
-        "title" : "Koozies and Swag",
+        "src" : "images/coming-soon.jpg",
+        "title" : "Embroidery",
         "blob" : "images/blobs/blob-3.svg"
     },
     {
         "id" : 3,
         "src" : "images/products/grab-the-vodka-300x300.webp",
-        "title" : "Tumblers and Tees",
+        "title" : "Tees",
         "blob" : "images/blobs/blob-4.svg"
     },
     {
         "id" : 4,
-        "src" : "images/products/jewelry-300x300.webp",
-        "title" : "Jewelry",
+        "src" : "images/coming-soon.jpg",
+        "title" : "Corporate Swag",
         "blob" : "images/blobs/blob-5.svg"
     }
 ]
+
+

@@ -12,9 +12,21 @@ theme = "difyTheme"
 
 
 [[params.social]]
-name = "facebook"
-url = "https://www.facebook.com/andrew-mccall"
-icon = "fa fa-facebook fa-2x"
+name = "Facebook"
+url = "https://www.facebook.com/thedify"
+icon = "fa fa-facebook fa-sm"
+
+[[params.social]]
+name = "Instagram"
+url = "https://www.instagram.com/thedify"
+icon = "fa fa-instagram fa-sm"
+
+[[params.social]]
+name = "TikTok"
+url = "https://www.tiktok.com/@thedify"
+image = "/images/tiktok-icon-50x50.png"
+
+
 
 [markup.goldmark.renderer]
     unsafe = true
@@ -62,12 +74,6 @@ identifier = 'services'
 name = 'Services'
 url = '/services/'
 
-[[menu.main]]
-identifier = 'blog'
-name = 'Blog'
-url = '/blog/'
-weight = -200
-
 [[menu.privacy]]
 identifier = 'privacy-policy'
 name = 'Privacy Policy'
@@ -92,47 +98,3 @@ name = 'DMCA Copyright'
 url = '/dmca/'
 weight = 20
 
-
-# ## Gallery Children
-
-# [[menu.main]]
-# identifier = 'animals-and-insects'
-# name = 'Animals & Insects'
-# url = '/gallery/animals-and-insects'
-# parent = 'gallery'
-# weight = -210
-
-# [[menu.main]]
-# identifier = 'collages'
-# name = 'Collages'
-# url = '/gallery/collages'
-# parent = 'gallery'
-# weight = -210
-
-# [[menu.main]]
-# identifier = 'commissions-and-kids-drawings'
-# name = "Commissions & Kid's Drawings"
-# url = '/gallery/commissions-and-kids-drawings'
-# parent = 'gallery'
-# weight = -210
-
-# [[menu.main]]
-# identifier = 'dolls'
-# name = 'Dolls'
-# url = '/gallery/dolls'
-# parent = 'gallery'
-# weight = -210
-
-# [[menu.main]]
-# identifier = 'felt-and-fabric-dolls'
-# name = 'Felt & Fabric'
-# url = '/gallery/dolls/felt-and-fabric-dolls'
-# parent = 'dolls'
-# weight = -210
-
-# [[menu.main]]
-# identifier = 'leather-dolls'
-# name = 'Leather Dolls'
-# url = '/gallery/dolls/leather-dolls'
-# parent = 'dolls'
-# weight = -210

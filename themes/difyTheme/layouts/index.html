@@ -14,14 +14,14 @@
                   <div class="swiper-lazy-preloader"></div>
                 <div class="container-fluid h-100">
                     <div class="row h-100 grid justify-content-center align-items-center">
-                      <div class="col-12 col-md-6 h-100 d-flex align-items-center justify-content-center flex-column hero-container">
+                      <div class="col-12 col-md-6 h-100 d-flex align-items-center justify-content-center flex-column hero-container {{ with .hide}} text-center text-light {{ end }}">
                         <h1 data-aos="fade-up" data-aos-duration="1250" data-aos-delay="100">{{.h1}}</h1>
                         <h2 data-aos="fade-up" data-aos-duration="1250" data-aos-delay="250">{{.h2}}</h2>
                         <a href="{{ .Site.BaseURL}}contact-us" class="cta-btn btn">Contact Us</a>
                       </div>
-                      <div class="col-12 col-md-6">
+                      <div class="col-12 col-md-6 {{ with .hide}} d-none {{ end }}">
                         <figure>
-                          <img src="{{.img | absURL}}" class="fluid-img rounded-circle" data-aos="fade-in" data-aos-duration="1250" data-aos-delay="100" loading="lazy" alt="">
+                          <img src="{{.img | absURL}}" class="fluid-img rounded-circle {{with .hide }} d-none {{ end }}" data-aos="fade-in" data-aos-duration="1250" data-aos-delay="100" loading="lazy" alt="">
                         </figure>
                       </div>
                     </div>

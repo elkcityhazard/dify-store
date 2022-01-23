@@ -352,6 +352,10 @@ section.testimonials .testimonials__name {
   line-height: 1.125;
   margin-bottom: 0.8em;
 }
+section.testimonials .testimonials__content {
+  max-height: 200px;
+  overflow-y: auto;
+}
 section.testimonials .wrapper {
   height: 100% !important;
   margin: 0;
