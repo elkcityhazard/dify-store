@@ -3,32 +3,32 @@ title: services
 description: "hello world"
 services:
 # service item loop
-- name : "Koozies and Swag"
-  image : "images/products/coozies-300x300.webp"
+- name : "Tumblers"
+  image : "images/products/crocin-300x300.webp"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id neque aliquam vestibulum morbi."
   url: "services/koozies-and-swag"
   
 # service item loop
-- name : "Custom Drinkware"
-  image : "images/products/long-day-cup-300x300.webp"
+- name : "Laser Engraving"
+  image : "images/products/engraved-cutting-board.jpg"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id neque aliquam vestibulum morbi."
   url: "services/custom-drinkware"
   
 # service item loop
-- name : "Jewelery"
-  image : "images/products/jewelry-300x300.webp"
+- name : "Embroidery"
+  image : "images/coming-soon.jpg"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id neque aliquam vestibulum morbi."
   url: "services/jewelery"
   
 # service item loop
-- name : "Tumblers"
-  image : "images/products/crocin-300x300.webp"
+- name : "Tees"
+  image : "images/products/grab-the-vodka-300x300.webp"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id neque aliquam vestibulum morbi."
   url: "services/tumblers"
   
 # service item loop
-- name : "T-shirts"
-  image : "images/products/coozies-300x300.webp"
+- name : "Corporate Swag"
+  image : "images/coming-soon.jpg"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id neque aliquam vestibulum morbi."
   url: "services/t-shirts"
   
